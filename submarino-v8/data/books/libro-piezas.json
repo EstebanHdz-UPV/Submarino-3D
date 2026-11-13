@@ -1,0 +1,613 @@
+{
+  "titulo": "Libro 1 · Manual de piezas y ensamblaje",
+  "paginas": [
+    {
+      "titulo": "Cómo usar este libro",
+      "parrafos": [
+        "Este es el manual de piezas y ensamblaje. Aquí encuentras qué hace cada pieza, con qué características viene y cómo se monta.",
+        "Todos los valores salen del catálogo del simulador (data/parts.json). Los materiales y las profundidades de colapso están en el Libro 2.",
+        "Puedes armar el submarino incompleto y probarlo: el simulador aplicará las consecuencias reales de cada pieza faltante."
+      ]
+    },
+    {
+      "titulo": "Orden de armado",
+      "parrafos": [
+        "Sigue este orden para no olvidar nada importante:"
+      ],
+      "pasos": [
+        "Elige el casco: forma, tamaño y material según la profundidad de tu misión (Libro 2).",
+        "Monta el tanque de lastre arriba del casco.",
+        "Monta el módulo de propulsión en la popa.",
+        "Coloca el domo de la cabina en la proa, con profundidad de diseño suficiente.",
+        "Instala las aletas en la popa para poder girar.",
+        "Coloca la batería dentro del casco.",
+        "Agrega pesos de compensación abajo, hasta lograr flotabilidad neutra con el lastre entre 0 % y 100 %.",
+        "Si el casco es muy pesado, añade espuma sintáctica arriba.",
+        "Opcionales: torre de acceso, focos y sonar.",
+        "Revisa las estadísticas: flotabilidad, estabilidad (BG), trimado y profundidad de diseño."
+      ]
+    },
+    {
+      "titulo": "Casco principal",
+      "parrafos": [
+        "Es la pieza que resiste la presión del agua. Su forma, espesor y material deciden la profundidad de colapso, la masa y el volumen que desplaza el submarino.",
+        "La esfera es la forma que mejor soporta la presión, pero deja poco espacio y arrastra más. El cilindro es más espacioso, pero se pandea antes si las paredes son delgadas."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Forma",
+          "Radio (m)",
+          "Largo (m)",
+          "Pared (mm)",
+          "Volumen (m³)"
+        ],
+        "filas": [
+          [
+            "Casco cilíndrico corto",
+            "cilindro",
+            "0.60",
+            "3.0",
+            "20",
+            "3.39"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "cilindro",
+            "0.75",
+            "4.5",
+            "25",
+            "7.95"
+          ],
+          [
+            "Casco esférico",
+            "esfera",
+            "0.90",
+            "1.8",
+            "30",
+            "3.05"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "esfera",
+            "0.90",
+            "1.8",
+            "55",
+            "3.05"
+          ]
+        ]
+      },
+      "consejos": [
+        "Para poca profundidad basta aluminio; para profundidad media usa acero; para gran profundidad usa una esfera de pared gruesa.",
+        "Un casco pesado necesita más flotabilidad (espuma sintáctica); uno ligero necesita pesos de compensación."
+      ]
+    },
+    {
+      "titulo": "Módulo de propulsión",
+      "parrafos": [
+        "Se monta en la popa y da el empuje para avanzar y retroceder. Más empuje permite mayor velocidad, pero consume mucha más energía."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Empuje (N)",
+          "Potencia (kW)",
+          "Eficiencia",
+          "Masa (kg)",
+          "Prof. diseño (m)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Propulsor pequeño",
+            "800",
+            "2.5",
+            "0.50",
+            "45",
+            "500",
+            "$6,000"
+          ],
+          [
+            "Propulsor medio",
+            "1,500",
+            "5.0",
+            "0.55",
+            "90",
+            "2,000",
+            "$14,000"
+          ],
+          [
+            "Propulsor grande",
+            "3,000",
+            "11.0",
+            "0.60",
+            "170",
+            "4,000",
+            "$32,000"
+          ]
+        ]
+      },
+      "consejos": [
+        "El consumo crece con el empuje elevado a 1,5: duplicar el empuje cuesta casi tres veces la potencia.",
+        "Revisa que su profundidad de diseño sea mayor que la de tu misión."
+      ]
+    },
+    {
+      "titulo": "Tanque de lastre",
+      "parrafos": [
+        "Se llena de agua para hundir el submarino y se vacía para subir. El volumen del tanque decide cuánta flotabilidad puedes controlar. Se monta arriba del casco."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Volumen (m³)",
+          "Flotabilidad que controla (kg)",
+          "Masa (kg)",
+          "Bomba (m³/s)",
+          "Consumo (W)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Tanque de lastre pequeño",
+            "0.30",
+            "308",
+            "60",
+            "0.010",
+            "150",
+            "$2,500"
+          ],
+          [
+            "Tanque de lastre mediano",
+            "0.60",
+            "615",
+            "110",
+            "0.015",
+            "220",
+            "$4,200"
+          ],
+          [
+            "Tanque de lastre grande",
+            "1.20",
+            "1,230",
+            "210",
+            "0.020",
+            "350",
+            "$7,500"
+          ]
+        ]
+      },
+      "consejos": [
+        "Calcula el llenado neutro en las estadísticas: debe quedar entre 0 % y 100 %.",
+        "Una bomba lenta hace que el submarino tarde en responder."
+      ]
+    },
+    {
+      "titulo": "Cabina de control (domo)",
+      "parrafos": [
+        "Es el visor acrílico del piloto. Si falta, el casco queda abierto y se inunda. Su profundidad de diseño suele limitar toda la misión."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Prof. diseño (m)",
+          "Masa (kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Domo acrílico 300 m",
+            "300",
+            "35",
+            "$3,000"
+          ],
+          [
+            "Domo acrílico 1000 m",
+            "1,000",
+            "90",
+            "$9,000"
+          ],
+          [
+            "Domo acrílico 4000 m",
+            "4,000",
+            "260",
+            "$30,000"
+          ]
+        ]
+      },
+      "consejos": [
+        "Elige un domo con profundidad de diseño mayor que la de tu escenario: es la pieza limitante más frecuente."
+      ]
+    },
+    {
+      "titulo": "Aletas",
+      "parrafos": [
+        "Los timones dan el control de giro. Funcionan por el flujo del agua: sin velocidad casi no giran. Con más área giras más fácil, pero arrastras más."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Área (m²)",
+          "Masa (kg)",
+          "Consumo (W)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Aletas pequeñas",
+            "0.4",
+            "30",
+            "30",
+            "$1,800"
+          ],
+          [
+            "Aletas grandes",
+            "0.9",
+            "60",
+            "45",
+            "$3,400"
+          ]
+        ]
+      },
+      "consejos": [
+        "Si no las colocas, el submarino no puede girar."
+      ]
+    },
+    {
+      "titulo": "Torre de acceso",
+      "parrafos": [
+        "Es la escotilla para entrar y salir en superficie. Aumenta el arrastre y limita la profundidad por la escotilla."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Prof. diseño (m)",
+          "Masa (kg)",
+          "Arrastre CdA (m²)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Torre de acceso baja",
+            "600",
+            "80",
+            "0.12",
+            "$4,000"
+          ],
+          [
+            "Torre de acceso alta",
+            "300",
+            "120",
+            "0.20",
+            "$5,500"
+          ]
+        ]
+      },
+      "consejos": [
+        "No es obligatoria; en misiones profundas conviene omitirla."
+      ]
+    },
+    {
+      "titulo": "Batería",
+      "parrafos": [
+        "Da la energía para propulsión, bombas, focos y sonar. La plomo-ácido es barata y pesada; el ion-litio es ligera y costosa. El frío reduce la energía disponible."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Capacidad (kWh)",
+          "Masa (kg)",
+          "Energía específica (Wh/kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Batería plomo-ácido 10 kWh",
+            "10",
+            "330",
+            "30",
+            "$3,500"
+          ],
+          [
+            "Batería plomo-ácido 20 kWh",
+            "20",
+            "660",
+            "30",
+            "$7,000"
+          ],
+          [
+            "Batería ion-litio 10 kWh",
+            "10",
+            "85",
+            "118",
+            "$12,000"
+          ],
+          [
+            "Batería ion-litio 20 kWh",
+            "20",
+            "170",
+            "118",
+            "$24,000"
+          ]
+        ]
+      },
+      "consejos": [
+        "La masa de la batería también ayuda a equilibrar la flotabilidad."
+      ]
+    },
+    {
+      "titulo": "Pesos de compensación",
+      "parrafos": [
+        "Pesos de plomo que se montan abajo dentro del casco. Compensan la flotabilidad sobrante y bajan el centro de gravedad (más estabilidad). Se pueden soltar en una emergencia."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Masa (kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Pesos de plomo 500 kg",
+            "500",
+            "$800"
+          ],
+          [
+            "Pesos de plomo 1000 kg",
+            "1,000",
+            "$1,600"
+          ],
+          [
+            "Pesos de plomo 2000 kg",
+            "2,000",
+            "$3,200"
+          ]
+        ]
+      },
+      "consejos": [
+        "Si el submarino flota demasiado con los tanques llenos, necesitas más peso."
+      ]
+    },
+    {
+      "titulo": "Flotabilidad fija (espuma sintáctica)",
+      "parrafos": [
+        "Bloques ligeros resistentes a la presión que dan flotabilidad sin consumir energía. Cada uno tiene una profundidad nominal."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Volumen (m³)",
+          "Masa (kg)",
+          "Flotabilidad neta (kg)",
+          "Prof. diseño (m)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Espuma sintáctica 1000 m",
+            "0.40",
+            "200",
+            "210",
+            "1,000",
+            "$5,000"
+          ],
+          [
+            "Espuma sintáctica 4000 m",
+            "0.40",
+            "260",
+            "150",
+            "4,000",
+            "$15,000"
+          ]
+        ]
+      },
+      "consejos": [
+        "Imprescindible si el casco es muy pesado (acero grueso o titanio)."
+      ]
+    },
+    {
+      "titulo": "Focos",
+      "parrafos": [
+        "Iluminan el fondo oscuro. Gastan energía según su potencia y alcance."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Consumo (W)",
+          "Alcance (m)",
+          "Masa (kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Focos LED 100 W",
+            "100",
+            "10",
+            "4",
+            "$500"
+          ],
+          [
+            "Focos LED 300 W",
+            "300",
+            "25",
+            "8",
+            "$1,500"
+          ]
+        ]
+      },
+      "consejos": [
+        "Con poca luz solar bajo los 100 m, los focos son la única luz."
+      ]
+    },
+    {
+      "titulo": "Sonar",
+      "parrafos": [
+        "Mide la distancia al fondo y muestra el relieve en el HUD. Sin sonar el HUD no muestra ecos."
+      ],
+      "tabla": {
+        "columnas": [
+          "Variante",
+          "Alcance (m)",
+          "Consumo (W)",
+          "Masa (kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Sonar básico",
+            "100",
+            "30",
+            "8",
+            "$4,000"
+          ],
+          [
+            "Sonar de largo alcance",
+            "300",
+            "80",
+            "20",
+            "$12,000"
+          ]
+        ]
+      },
+      "consejos": [
+        "El de largo alcance consume más energía."
+      ]
+    },
+    {
+      "titulo": "Equilibrio y estabilidad",
+      "parrafos": [
+        "El submarino es estable cuando su centro de gravedad (CG) queda por debajo del centro de flotación (CB). La distancia entre ambos se llama BG: cuanto mayor, más rápido se endereza.",
+        "Si el CG y el CB no están alineados de proa a popa, el submarino queda inclinado (trimado). Mueve la batería o los pesos hacia adelante o atrás para corregirlo.",
+        "El tanque de lastre va arriba: al llenarse sube el CG, así que conviene un BG generoso."
+      ],
+      "consejos": [
+        "Pesos de compensación bajos aumentan la estabilidad.",
+        "Si ves la advertencia de trimado, revisa el reparto de masas.",
+        "Un BG negativo hace que el submarino se voltee."
+      ]
+    },
+    {
+      "titulo": "Piezas faltantes y consecuencias",
+      "parrafos": [
+        "Puedes probar con el diseño incompleto. Esto es lo que ocurre si falta una pieza:"
+      ],
+      "tabla": {
+        "columnas": [
+          "Punto de montaje",
+          "Obligatoria",
+          "Consecuencia"
+        ],
+        "filas": [
+          [
+            "Casco principal",
+            "Sí",
+            "Sin casco no hay submarino: la prueba no se puede ejecutar."
+          ],
+          [
+            "Módulo de propulsión",
+            "Sí",
+            "Sin propulsor no hay empuje: el submarino solo deriva con las corrientes."
+          ],
+          [
+            "Tanque de lastre",
+            "Sí",
+            "Sin tanque de lastre no hay control de profundidad."
+          ],
+          [
+            "Cabina de control (domo)",
+            "Sí",
+            "Sin domo el casco queda abierto: se inunda y la masa aumenta."
+          ],
+          [
+            "Aletas",
+            "Sí",
+            "Sin aletas no se puede girar a baja velocidad ni a alta."
+          ],
+          [
+            "Torre de acceso",
+            "No",
+            "Sin torre no hay acceso en superficie (no afecta la física)."
+          ],
+          [
+            "Batería",
+            "Sí",
+            "Sin batería no hay energía: ni propulsión, ni bombas, ni instrumentos."
+          ],
+          [
+            "Pesos de compensación",
+            "No",
+            "Sin pesos de compensación el submarino suele quedar muy flotante."
+          ],
+          [
+            "Flotabilidad fija",
+            "No",
+            "Sin espuma sintáctica no hay flotabilidad fija adicional."
+          ],
+          [
+            "Focos",
+            "No",
+            "Sin focos no se ilumina el fondo oscuro."
+          ],
+          [
+            "Sonar",
+            "No",
+            "Sin sonar el HUD no muestra la distancia al fondo."
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Glosario",
+      "parrafos": [],
+      "tabla": {
+        "columnas": [
+          "Término",
+          "Significado"
+        ],
+        "filas": [
+          [
+            "Flotabilidad neta",
+            "Empuje del agua menos el peso. Positiva: sube. Negativa: se hunde."
+          ],
+          [
+            "Llenado neutro",
+            "Porcentaje de lastre con el que el submarino ni sube ni baja."
+          ],
+          [
+            "BG",
+            "Distancia entre el centro de gravedad y el de flotación."
+          ],
+          [
+            "Trimado",
+            "Inclinación de proa a popa por mal reparto de masas."
+          ],
+          [
+            "Pandeo",
+            "Deformación repentina de una pared delgada por la presión externa."
+          ],
+          [
+            "Factor de seguridad",
+            "Cuántas veces la presión de colapso supera la presión de trabajo (el simulador exige 1,5)."
+          ],
+          [
+            "Masa añadida",
+            "Agua que el casco arrastra al acelerar; aumenta la masa efectiva."
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Nuevos equipos de navegación y acceso",
+      "parrafos": [
+        "El conjunto de timón y navegación se instala dentro del casco y reúne la rueda de dirección, las palancas de control y los indicadores de profundidad y presión.",
+        "El periscopio se monta sobre la parte superior del casco. Su tubo vertical termina en un cabezal óptico para observación.",
+        "Las portillas son ventanas circulares laterales con marcos metálicos y cristales reforzados.",
+        "La escotilla hermética incluye bisagras, junta y cierre mecánico. En la vista 3D, haz clic en la tapa para alternar la animación de apertura y cierre."
+      ],
+      "consejos": [
+        "Los cuatro conjuntos son opcionales y no alteran los requisitos mínimos para ejecutar las pruebas.",
+        "Los accesorios se generan con geometría procedural cuando no hay un modelo GLB disponible."
+      ]
+    }
+  ]
+}

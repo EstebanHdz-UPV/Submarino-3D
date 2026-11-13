@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Muestra de telemetría (una línea JSONL)",
+  "type": "object",
+  "required": [
+    "ts"
+  ],
+  "properties": {
+    "ts": {
+      "type": "string",
+      "description": "Fecha y hora ISO-8601"
+    },
+    "t": {
+      "type": "number",
+      "description": "Tiempo de simulación (s)"
+    },
+    "depthM": {
+      "type": "number",
+      "description": "Profundidad (m)"
+    },
+    "speedMs": {
+      "type": "number",
+      "description": "Rapidez (m/s)"
+    },
+    "headingDeg": {
+      "type": "number"
+    },
+    "pitchDeg": {
+      "type": "number"
+    },
+    "rollDeg": {
+      "type": "number"
+    },
+    "thrustN": {
+      "type": "number"
+    },
+    "ballastFill": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "pressureAtm": {
+      "type": "number",
+      "description": "Presión absoluta"
+    },
+    "soc": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Estado de carga"
+    },
+    "powerW": {
+      "type": "number"
+    },
+    "proyecto_id": {
+      "type": "string",
+      "description": "Identificador del proyecto"
+    },
+    "dimension_steam": {
+      "type": "string",
+      "description": "Dimensión STEAM activa (M, S, E, T, A)"
+    },
+    "aciertos": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total acumulado de acciones exitosas"
+    },
+    "fallos": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total acumulado de fallos o errores"
+    },
+    "inactividadS": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Segundos transcurridos desde la última interacción del usuario"
+    },
+    "inactivo": {
+      "type": "boolean",
+      "description": "Indica si el usuario supera el umbral de inactividad"
+    },
+    "x": {
+      "type": "number",
+      "description": "Coordenada X en metros"
+    },
+    "y": {
+      "type": "number",
+      "description": "Coordenada Y en metros"
+    },
+    "z": {
+      "type": "number",
+      "description": "Coordenada Z en metros"
+    },
+    "coordenadas": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      },
+      "description": "Vector tridimensional de posición del submarino"
+    },
+    "camara": {
+      "type": "string",
+      "description": "Modo de cámara actual (seguimiento, orbita, proa, taller)"
+    },
+    "evento": {
+      "type": "string",
+      "description": "Presente en las líneas de evento estandarizados y de simulación (matematicas_intento, ciencia_intento, objeto_colocado, programa_ejecutado, colapso, alerta-profundidad, energia-agotada, prueba-finalizada...)"
+    }
+  }
+}

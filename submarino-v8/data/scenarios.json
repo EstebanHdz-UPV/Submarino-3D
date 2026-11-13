@@ -1,0 +1,210 @@
+{
+  "escenarios": [
+    {
+      "id": "libre",
+      "nombre": "Piloto manual",
+      "tipo": "manual",
+      "descripcion": "Maneja el submarino con el teclado y observa el HUD en tiempo real.",
+      "condiciones": {
+        "profundidadM": 30,
+        "velocidadNudos": 3,
+        "temperaturaC": 12,
+        "corrienteMs": 0
+      },
+      "duracionS": 0,
+      "criterios": []
+    },
+    {
+      "id": "flotabilidad",
+      "nombre": "Flotabilidad en superficie",
+      "tipo": "flotabilidad",
+      "descripcion": "Con los tanques vacíos, ¿flota y se mantiene nivelado?",
+      "condiciones": {
+        "profundidadM": 0,
+        "velocidadNudos": 0,
+        "temperaturaC": 15,
+        "corrienteMs": 0
+      },
+      "duracionS": 120,
+      "criterios": [
+        {
+          "id": "flota",
+          "texto": "Se mantiene en superficie (profundidad ≤ 1 m)",
+          "umbral": 1.0
+        },
+        {
+          "id": "nivelado",
+          "texto": "Inclinación ≤ 5°",
+          "umbral": 5
+        }
+      ]
+    },
+    {
+      "id": "inmersion",
+      "nombre": "Inmersión estática",
+      "tipo": "profundidad",
+      "descripcion": "Sumergirse con el lastre y mantener la profundidad sin avanzar.",
+      "condiciones": {
+        "profundidadM": 20,
+        "velocidadNudos": 0,
+        "temperaturaC": 15,
+        "corrienteMs": 0
+      },
+      "duracionS": 600,
+      "criterios": [
+        {
+          "id": "alcanza",
+          "texto": "Llega a ±2 m de la profundidad objetivo",
+          "umbral": 2
+        },
+        {
+          "id": "mantiene",
+          "texto": "Se mantiene estable al final (±2 m)",
+          "umbral": 2
+        },
+        {
+          "id": "nivelado",
+          "texto": "Inclinación ≤ 10°",
+          "umbral": 10
+        }
+      ]
+    },
+    {
+      "id": "profundidad",
+      "nombre": "Profundidad de diseño",
+      "tipo": "profundidad",
+      "descripcion": "Descender a la profundidad elegida y comprobar el casco.",
+      "condiciones": {
+        "profundidadM": 100,
+        "velocidadNudos": 0,
+        "temperaturaC": 12,
+        "corrienteMs": 0
+      },
+      "duracionS": 900,
+      "criterios": [
+        {
+          "id": "alcanza",
+          "texto": "Llega a ±2 m de la profundidad objetivo",
+          "umbral": 2
+        },
+        {
+          "id": "sinColapso",
+          "texto": "No hay colapso de ninguna pieza"
+        },
+        {
+          "id": "seguridad",
+          "texto": "Factor de seguridad ≥ 1,5 a esa profundidad",
+          "umbral": 1.5
+        }
+      ]
+    },
+    {
+      "id": "maniobra",
+      "nombre": "Maniobra",
+      "tipo": "maniobra",
+      "descripcion": "Avanzar y girar con el timón: mide el radio de giro.",
+      "condiciones": {
+        "profundidadM": 10,
+        "velocidadNudos": 3,
+        "temperaturaC": 15,
+        "corrienteMs": 0
+      },
+      "duracionS": 300,
+      "criterios": [
+        {
+          "id": "gira",
+          "texto": "Completa al menos 180° de giro",
+          "umbral": 180
+        },
+        {
+          "id": "radio",
+          "texto": "Radio de giro ≤ 6 veces el largo",
+          "umbral": 6
+        },
+        {
+          "id": "nivelado",
+          "texto": "Inclinación ≤ 15°",
+          "umbral": 15
+        }
+      ]
+    },
+    {
+      "id": "autonomia",
+      "nombre": "Autonomía",
+      "tipo": "autonomia",
+      "descripcion": "Navegar a velocidad crucero durante 2 horas.",
+      "condiciones": {
+        "profundidadM": 20,
+        "velocidadNudos": 2,
+        "temperaturaC": 12,
+        "corrienteMs": 0
+      },
+      "duracionS": 7200,
+      "criterios": [
+        {
+          "id": "energia",
+          "texto": "Termina con energía en la batería",
+          "umbral": 0
+        },
+        {
+          "id": "velocidad",
+          "texto": "Mantiene al menos el 80 % de la velocidad pedida",
+          "umbral": 0.8
+        }
+      ]
+    },
+    {
+      "id": "corriente",
+      "nombre": "Corriente marina",
+      "tipo": "corriente",
+      "descripcion": "Mantener la posición contra una corriente.",
+      "condiciones": {
+        "profundidadM": 30,
+        "velocidadNudos": 0,
+        "temperaturaC": 12,
+        "corrienteMs": 0.8
+      },
+      "duracionS": 400,
+      "criterios": [
+        {
+          "id": "posicion",
+          "texto": "Deriva final ≤ 25 m respecto al punto de partida",
+          "umbral": 25
+        },
+        {
+          "id": "energia",
+          "texto": "Termina con energía en la batería",
+          "umbral": 0
+        }
+      ]
+    },
+    {
+      "id": "emergencia",
+      "nombre": "Emergencia",
+      "tipo": "emergencia",
+      "descripcion": "Pérdida de energía a 50 m: soltar pesos y vaciar lastre.",
+      "condiciones": {
+        "profundidadM": 50,
+        "velocidadNudos": 0,
+        "temperaturaC": 12,
+        "corrienteMs": 0
+      },
+      "duracionS": 900,
+      "eventos": [
+        { "t": 30, "accion": "falla-energia" },
+        { "t": 30, "accion": "soltar-pesos" }
+      ],
+      "criterios": [
+        {
+          "id": "emerge",
+          "texto": "Regresa a la superficie (profundidad ≤ 1 m)",
+          "umbral": 1.0
+        },
+        {
+          "id": "sinColapso",
+          "texto": "No hay colapso durante la maniobra"
+        }
+      ]
+    }
+  ]
+}

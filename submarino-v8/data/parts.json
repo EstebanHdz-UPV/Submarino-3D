@@ -1,0 +1,3654 @@
+{
+  "_nota": "Catalogo de piezas. Masas, volumenes y consumos son valores de referencia. El casco calcula masa y colapso con su geometria y material. Los modelos .glb se escalan a 'visual' (m).",
+  "tipos": [
+    "casco",
+    "propulsion",
+    "lastre",
+    "cabina",
+    "aletas",
+    "torre",
+    "bateria",
+    "lastreFijo",
+    "flotabilidad",
+    "focos",
+    "sonar",
+    "controles",
+    "periscopio",
+    "portillas",
+    "escotilla"
+  ],
+  "piezas": [
+    {
+      "id": "casco-cilindro-corto",
+      "tipo": "casco",
+      "nombre": "Casco cilíndrico corto",
+      "archivo": "casco-principal.glb",
+      "forma": "cilindro",
+      "radioM": 0.6,
+      "largoM": 3,
+      "espesorM": 0.02,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "aluminio-6061",
+      "factorCostoFabricacion": 3,
+      "descripcion": "Casco compacto de 3 m. Menos volumen, menos masa y más fácil de equilibrar.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 732.871,
+        "volumenDesplazadoM3": 3.39292,
+        "densidadKgM3": 2700,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-cilindro-largo",
+      "tipo": "casco",
+      "nombre": "Casco cilíndrico largo",
+      "archivo": "casco-principal.glb",
+      "forma": "cilindro",
+      "radioM": 0.75,
+      "largoM": 4.5,
+      "espesorM": 0.025,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "aluminio-7075",
+      "factorCostoFabricacion": 3,
+      "descripcion": "Casco de 4,5 m con mucho volumen interior y más flotabilidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1737.988,
+        "volumenDesplazadoM3": 7.95216,
+        "densidadKgM3": 2810,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-esfera",
+      "tipo": "casco",
+      "nombre": "Casco esférico",
+      "archivo": "casco-esfera.glb",
+      "forma": "esfera",
+      "radioM": 0.9,
+      "largoM": 1.8,
+      "espesorM": 0.03,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "titanio-6al4v",
+      "factorCostoFabricacion": 4,
+      "descripcion": "La forma más eficiente ante la presión, pero con poco espacio y mayor arrastre.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1352.757,
+        "volumenDesplazadoM3": 3.05363,
+        "densidadKgM3": 4430,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-esfera-gruesa",
+      "tipo": "casco",
+      "nombre": "Casco esférico de pared gruesa",
+      "archivo": "casco-esfera.glb",
+      "forma": "esfera",
+      "radioM": 0.9,
+      "largoM": 1.8,
+      "espesorM": 0.055,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "acero-hy80",
+      "factorCostoFabricacion": 4,
+      "descripcion": "Esfera de 55 mm de pared para gran profundidad: muy pesada, necesita flotabilidad fija.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 4394.68,
+        "volumenDesplazadoM3": 3.05363,
+        "densidadKgM3": 7850,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "prop-pequeno",
+      "tipo": "propulsion",
+      "nombre": "Propulsor pequeño",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 45,
+      "volumenM3": 0.03,
+      "cdaM2": 0.05,
+      "empujeMaxN": 800,
+      "potenciaNominalW": 2500,
+      "eficiencia": 0.5,
+      "profundidadDisenoM": 500,
+      "costoUsd": 6000,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.6,
+        "ancho": 0.5,
+        "alto": 0.5
+      },
+      "descripcion": "800 N de empuje; consumo bajo.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 45,
+        "volumenDesplazadoM3": 0.03,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.05,
+        "profundidadOperacionM": 500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-medio",
+      "tipo": "propulsion",
+      "nombre": "Propulsor medio",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 90,
+      "volumenM3": 0.05,
+      "cdaM2": 0.08,
+      "empujeMaxN": 1500,
+      "potenciaNominalW": 5000,
+      "eficiencia": 0.55,
+      "profundidadDisenoM": 2000,
+      "costoUsd": 14000,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.8,
+        "ancho": 0.7,
+        "alto": 0.7
+      },
+      "descripcion": "1500 N de empuje; equilibrio entre potencia y consumo.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 90,
+        "volumenDesplazadoM3": 0.05,
+        "densidadKgM3": 1800,
+        "coeficienteArrastreAreaM2": 0.08,
+        "profundidadOperacionM": 2000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-grande",
+      "tipo": "propulsion",
+      "nombre": "Propulsor grande",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 170,
+      "volumenM3": 0.09,
+      "cdaM2": 0.12,
+      "empujeMaxN": 3000,
+      "potenciaNominalW": 11000,
+      "eficiencia": 0.6,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 32000,
+      "material": "titanio-6al4v",
+      "visual": {
+        "largo": 1,
+        "ancho": 0.9,
+        "alto": 0.9
+      },
+      "descripcion": "3000 N de empuje; alto consumo.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 170,
+        "volumenDesplazadoM3": 0.09,
+        "densidadKgM3": 1888.89,
+        "coeficienteArrastreAreaM2": 0.12,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-pequeno",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre pequeño",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 60,
+      "volumenM3": 0.3,
+      "cdaM2": 0.04,
+      "bombaM3s": 0.01,
+      "consumoBombaW": 150,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 2500,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1,
+        "ancho": 0.6,
+        "alto": 0.5
+      },
+      "descripcion": "0,30 m³: controla unos 300 kg de flotabilidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 60,
+        "volumenDesplazadoM3": 0.3,
+        "densidadKgM3": 200,
+        "coeficienteArrastreAreaM2": 0.04,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-mediano",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre mediano",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 110,
+      "volumenM3": 0.6,
+      "cdaM2": 0.06,
+      "bombaM3s": 0.015,
+      "consumoBombaW": 220,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 4200,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.3,
+        "ancho": 0.8,
+        "alto": 0.6
+      },
+      "descripcion": "0,60 m³: controla unos 600 kg de flotabilidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 110,
+        "volumenDesplazadoM3": 0.6,
+        "densidadKgM3": 183.33,
+        "coeficienteArrastreAreaM2": 0.06,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-grande",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre grande",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 210,
+      "volumenM3": 1.2,
+      "cdaM2": 0.09,
+      "bombaM3s": 0.02,
+      "consumoBombaW": 350,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 7500,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.6,
+        "ancho": 0.9,
+        "alto": 0.75
+      },
+      "descripcion": "1,20 m³: controla más de una tonelada de flotabilidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 210,
+        "volumenDesplazadoM3": 1.2,
+        "densidadKgM3": 175,
+        "coeficienteArrastreAreaM2": 0.09,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-300",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 300 m",
+      "archivo": "cabina-control.glb",
+      "masaKg": 35,
+      "volumenM3": 0.2,
+      "cdaM2": 0.05,
+      "profundidadDisenoM": 300,
+      "costoUsd": 3000,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 0.9,
+        "ancho": 0.9,
+        "alto": 0.7
+      },
+      "descripcion": "Visor ligero para poca profundidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 35,
+        "volumenDesplazadoM3": 0.2,
+        "densidadKgM3": 175,
+        "coeficienteArrastreAreaM2": 0.05,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-1000",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 1000 m",
+      "archivo": "cabina-control.glb",
+      "masaKg": 90,
+      "volumenM3": 0.22,
+      "cdaM2": 0.05,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 9000,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 0.95,
+        "ancho": 0.95,
+        "alto": 0.75
+      },
+      "descripcion": "Visor más grueso para profundidad media.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 90,
+        "volumenDesplazadoM3": 0.22,
+        "densidadKgM3": 409.09,
+        "coeficienteArrastreAreaM2": 0.05,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-4000",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 4000 m",
+      "archivo": "cabina-control.glb",
+      "masaKg": 260,
+      "volumenM3": 0.25,
+      "cdaM2": 0.06,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 30000,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 1,
+        "ancho": 1,
+        "alto": 0.8
+      },
+      "descripcion": "Visor muy grueso, pesado y costoso.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 260,
+        "volumenDesplazadoM3": 0.25,
+        "densidadKgM3": 1040,
+        "coeficienteArrastreAreaM2": 0.06,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-pequenas",
+      "tipo": "aletas",
+      "nombre": "Aletas pequeñas",
+      "archivo": "aletas.glb",
+      "masaKg": 30,
+      "volumenM3": 0.02,
+      "cdaM2": 0.03,
+      "areaAletasM2": 0.4,
+      "consumoW": 30,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 1800,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.5,
+        "ancho": 1.4,
+        "alto": 0.5
+      },
+      "descripcion": "Poca autoridad de giro; menos arrastre.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 30,
+        "volumenDesplazadoM3": 0.02,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.03,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-grandes",
+      "tipo": "aletas",
+      "nombre": "Aletas grandes",
+      "archivo": "aletas.glb",
+      "masaKg": 60,
+      "volumenM3": 0.04,
+      "cdaM2": 0.06,
+      "areaAletasM2": 0.9,
+      "consumoW": 45,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3400,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.7,
+        "ancho": 2,
+        "alto": 0.7
+      },
+      "descripcion": "Mucha autoridad de giro; más arrastre.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 60,
+        "volumenDesplazadoM3": 0.04,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.06,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-baja",
+      "tipo": "torre",
+      "nombre": "Torre de acceso baja",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 80,
+      "volumenM3": 0.15,
+      "cdaM2": 0.12,
+      "areaLateralM2": 0.35,
+      "profundidadDisenoM": 600,
+      "costoUsd": 4000,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.8,
+        "ancho": 0.5,
+        "alto": 0.5
+      },
+      "descripcion": "Escotilla de acceso con poco arrastre.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 80,
+        "volumenDesplazadoM3": 0.15,
+        "densidadKgM3": 533.33,
+        "coeficienteArrastreAreaM2": 0.12,
+        "profundidadOperacionM": 600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-alta",
+      "tipo": "torre",
+      "nombre": "Torre de acceso alta",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 120,
+      "volumenM3": 0.3,
+      "cdaM2": 0.2,
+      "areaLateralM2": 0.7,
+      "profundidadDisenoM": 300,
+      "costoUsd": 5500,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1,
+        "ancho": 0.6,
+        "alto": 0.9
+      },
+      "descripcion": "Más visibilidad en superficie, pero más arrastre y menos profundidad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 120,
+        "volumenDesplazadoM3": 0.3,
+        "densidadKgM3": 400,
+        "coeficienteArrastreAreaM2": 0.2,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-plomo-10",
+      "tipo": "bateria",
+      "nombre": "Batería plomo-ácido 10 kWh",
+      "archivo": "bateria.glb",
+      "masaKg": 330,
+      "capacidadWh": 10000,
+      "coefTempCapacidad": 0.008,
+      "costoUsd": 3500,
+      "visual": {
+        "largo": 0.8,
+        "ancho": 0.5,
+        "alto": 0.4
+      },
+      "descripcion": "Barata y pesada (~30 Wh/kg).",
+      "propiedadesFisicas": {
+        "masaSecaKg": 330,
+        "volumenDesplazadoM3": 0.0448,
+        "densidadKgM3": 7366.07,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-plomo-20",
+      "tipo": "bateria",
+      "nombre": "Batería plomo-ácido 20 kWh",
+      "archivo": "bateria.glb",
+      "masaKg": 660,
+      "capacidadWh": 20000,
+      "coefTempCapacidad": 0.008,
+      "costoUsd": 7000,
+      "visual": {
+        "largo": 1,
+        "ancho": 0.6,
+        "alto": 0.5
+      },
+      "descripcion": "Mucha energía, mucha masa.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 660,
+        "volumenDesplazadoM3": 0.084,
+        "densidadKgM3": 7857.14,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-litio-10",
+      "tipo": "bateria",
+      "nombre": "Batería ion-litio 10 kWh",
+      "archivo": "bateria.glb",
+      "masaKg": 85,
+      "capacidadWh": 10000,
+      "coefTempCapacidad": 0.004,
+      "costoUsd": 12000,
+      "visual": {
+        "largo": 0.7,
+        "ancho": 0.4,
+        "alto": 0.3
+      },
+      "descripcion": "Ligera (~120 Wh/kg) y costosa.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 85,
+        "volumenDesplazadoM3": 0.02352,
+        "densidadKgM3": 3613.95,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-litio-20",
+      "tipo": "bateria",
+      "nombre": "Batería ion-litio 20 kWh",
+      "archivo": "bateria.glb",
+      "masaKg": 170,
+      "capacidadWh": 20000,
+      "coefTempCapacidad": 0.004,
+      "costoUsd": 24000,
+      "visual": {
+        "largo": 0.9,
+        "ancho": 0.5,
+        "alto": 0.4
+      },
+      "descripcion": "Autonomía alta con masa moderada.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 170,
+        "volumenDesplazadoM3": 0.0504,
+        "densidadKgM3": 3373.02,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-500",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 500 kg",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 500,
+      "soltable": true,
+      "costoUsd": 800,
+      "visual": {
+        "largo": 0.8,
+        "ancho": 0.4,
+        "alto": 0.2
+      },
+      "descripcion": "Compensa flotabilidad sobrante y baja el centro de gravedad.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 500,
+        "volumenDesplazadoM3": 0.01792,
+        "densidadKgM3": 27901.79,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-1000",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 1000 kg",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 1000,
+      "soltable": true,
+      "costoUsd": 1600,
+      "visual": {
+        "largo": 1,
+        "ancho": 0.5,
+        "alto": 0.25
+      },
+      "descripcion": "Compensación media.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1000,
+        "volumenDesplazadoM3": 0.035,
+        "densidadKgM3": 28571.43,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-2000",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 2000 kg",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 2000,
+      "soltable": true,
+      "costoUsd": 3200,
+      "visual": {
+        "largo": 1.2,
+        "ancho": 0.6,
+        "alto": 0.3
+      },
+      "descripcion": "Compensación alta.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 2000,
+        "volumenDesplazadoM3": 0.06048,
+        "densidadKgM3": 33068.78,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-1000",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 1000 m",
+      "archivo": "espuma.glb",
+      "masaKg": 200,
+      "volumenM3": 0.4,
+      "cdaM2": 0.04,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 5000,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1,
+        "ancho": 0.6,
+        "alto": 0.3
+      },
+      "descripcion": "Flotabilidad fija (500 kg/m³).",
+      "propiedadesFisicas": {
+        "masaSecaKg": 200,
+        "volumenDesplazadoM3": 0.4,
+        "densidadKgM3": 500,
+        "coeficienteArrastreAreaM2": 0.04,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-4000",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 4000 m",
+      "archivo": "espuma.glb",
+      "masaKg": 260,
+      "volumenM3": 0.4,
+      "cdaM2": 0.04,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 15000,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1,
+        "ancho": 0.6,
+        "alto": 0.3
+      },
+      "descripcion": "Flotabilidad fija para gran profundidad (650 kg/m³).",
+      "propiedadesFisicas": {
+        "masaSecaKg": 260,
+        "volumenDesplazadoM3": 0.4,
+        "densidadKgM3": 650,
+        "coeficienteArrastreAreaM2": 0.04,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-100",
+      "tipo": "focos",
+      "nombre": "Focos LED 100 W",
+      "archivo": "focos.glb",
+      "masaKg": 4,
+      "consumoW": 100,
+      "costoUsd": 500,
+      "visual": {
+        "largo": 0.3,
+        "ancho": 0.3,
+        "alto": 0.2
+      },
+      "alcanceLuzM": 10,
+      "descripcion": "Iluminan unos 10 m.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 4,
+        "volumenDesplazadoM3": 0.00504,
+        "densidadKgM3": 793.65,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-300",
+      "tipo": "focos",
+      "nombre": "Focos LED 300 W",
+      "archivo": "focos.glb",
+      "masaKg": 8,
+      "consumoW": 300,
+      "costoUsd": 1500,
+      "visual": {
+        "largo": 0.35,
+        "ancho": 0.35,
+        "alto": 0.25
+      },
+      "alcanceLuzM": 25,
+      "descripcion": "Iluminan unos 25 m.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 8,
+        "volumenDesplazadoM3": 0.00857,
+        "densidadKgM3": 932.94,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-basico",
+      "tipo": "sonar",
+      "nombre": "Sonar básico",
+      "archivo": "sonar.glb",
+      "masaKg": 8,
+      "consumoW": 30,
+      "alcanceM": 100,
+      "costoUsd": 4000,
+      "visual": {
+        "largo": 0.3,
+        "ancho": 0.3,
+        "alto": 0.2
+      },
+      "descripcion": "Alcance de 100 m.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 8,
+        "volumenDesplazadoM3": 0.00504,
+        "densidadKgM3": 1587.3,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-alto",
+      "tipo": "sonar",
+      "nombre": "Sonar de largo alcance",
+      "archivo": "sonar.glb",
+      "masaKg": 20,
+      "consumoW": 80,
+      "alcanceM": 300,
+      "costoUsd": 12000,
+      "visual": {
+        "largo": 0.4,
+        "ancho": 0.4,
+        "alto": 0.3
+      },
+      "descripcion": "Alcance de 300 m.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 20,
+        "volumenDesplazadoM3": 0.01344,
+        "densidadKgM3": 1488.1,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "casco-cilindro-corto-v5",
+      "tipo": "casco",
+      "nombre": "Casco cilíndrico corto compacto reforzado",
+      "archivo": "casco-principal.glb",
+      "forma": "cilindro",
+      "radioM": 0.636,
+      "largoM": 2.925,
+      "espesorM": 0.0216,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "aluminio-6061",
+      "factorCostoFabricacion": 3,
+      "descripcion": "Configuración compacto reforzado; variante 5 de casco. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 829.901,
+        "volumenDesplazadoM3": 3.71698,
+        "densidadKgM3": 2700,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-cilindro-largo-v6",
+      "tipo": "casco",
+      "nombre": "Casco cilíndrico largo de exploración",
+      "archivo": "casco-principal.glb",
+      "forma": "cilindro",
+      "radioM": 0.705,
+      "largoM": 4.612,
+      "espesorM": 0.023,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "aluminio-7075",
+      "factorCostoFabricacion": 3,
+      "descripcion": "Configuración de exploración; variante 6 de casco. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1522.193,
+        "volumenDesplazadoM3": 7.20141,
+        "densidadKgM3": 2810,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-esfera-v7",
+      "tipo": "casco",
+      "nombre": "Casco esférico de gran autonomía",
+      "archivo": "casco-esfera.glb",
+      "forma": "esfera",
+      "radioM": 0.9,
+      "largoM": 1.935,
+      "espesorM": 0.03,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "titanio-6al4v",
+      "factorCostoFabricacion": 4,
+      "descripcion": "Configuración de gran autonomía; variante 7 de casco. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1352.757,
+        "volumenDesplazadoM3": 3.05363,
+        "densidadKgM3": 4430,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "casco-esfera-gruesa-v8",
+      "tipo": "casco",
+      "nombre": "Casco esférico de pared gruesa de alta presión",
+      "archivo": "casco-esfera.glb",
+      "forma": "esfera",
+      "radioM": 0.954,
+      "largoM": 1.665,
+      "espesorM": 0.0594,
+      "materialesPermitidos": [
+        "aluminio-6061",
+        "aluminio-7075",
+        "acero-hy80",
+        "titanio-6al4v",
+        "compuesto-carbono"
+      ],
+      "materialPorDefecto": "acero-hy80",
+      "factorCostoFabricacion": 4,
+      "descripcion": "Configuración de alta presión; variante 8 de casco. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 5332.891,
+        "volumenDesplazadoM3": 3.63692,
+        "densidadKgM3": 7850,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Masa estimada con el material por defecto; el motor la recalcula al cambiar material."
+      }
+    },
+    {
+      "id": "prop-pequeno-v4",
+      "tipo": "propulsion",
+      "nombre": "Propulsor pequeño de maniobra",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 52.2,
+      "volumenM3": 0.0348,
+      "cdaM2": 0.058,
+      "empujeMaxN": 928,
+      "potenciaNominalW": 2900,
+      "eficiencia": 0.5,
+      "profundidadDisenoM": 500,
+      "costoUsd": 6960,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.696,
+        "ancho": 0.58,
+        "alto": 0.58
+      },
+      "descripcion": "Configuración de maniobra; variante 4 de propulsion. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 52.2,
+        "volumenDesplazadoM3": 0.0348,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.058,
+        "profundidadOperacionM": 500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-medio-v5",
+      "tipo": "propulsion",
+      "nombre": "Propulsor medio de crucero",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 75.6,
+      "volumenM3": 0.042,
+      "cdaM2": 0.0672,
+      "empujeMaxN": 1260,
+      "potenciaNominalW": 4200,
+      "eficiencia": 0.55,
+      "profundidadDisenoM": 2000,
+      "costoUsd": 11760,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.672,
+        "ancho": 0.588,
+        "alto": 0.588
+      },
+      "descripcion": "Configuración de crucero; variante 5 de propulsion. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 75.6,
+        "volumenDesplazadoM3": 0.042,
+        "densidadKgM3": 1800,
+        "coeficienteArrastreAreaM2": 0.0672,
+        "profundidadOperacionM": 2000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-grande-v6",
+      "tipo": "propulsion",
+      "nombre": "Propulsor grande vectorial",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 156.4,
+      "volumenM3": 0.0828,
+      "cdaM2": 0.1104,
+      "empujeMaxN": 2760,
+      "potenciaNominalW": 10120,
+      "eficiencia": 0.6,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 29440,
+      "material": "titanio-6al4v",
+      "visual": {
+        "largo": 0.92,
+        "ancho": 0.828,
+        "alto": 0.828
+      },
+      "descripcion": "Configuración vectorial; variante 6 de propulsion. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 156.4,
+        "volumenDesplazadoM3": 0.0828,
+        "densidadKgM3": 1888.89,
+        "coeficienteArrastreAreaM2": 0.1104,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-pequeno-v4-v7",
+      "tipo": "propulsion",
+      "nombre": "Propulsor pequeño de maniobra silencioso",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 52.2,
+      "volumenM3": 0.0348,
+      "cdaM2": 0.058,
+      "empujeMaxN": 928,
+      "potenciaNominalW": 2900,
+      "eficiencia": 0.5,
+      "profundidadDisenoM": 500,
+      "costoUsd": 6960,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.696,
+        "ancho": 0.58,
+        "alto": 0.58
+      },
+      "descripcion": "Configuración silencioso; variante 7 de propulsion. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 52.2,
+        "volumenDesplazadoM3": 0.0348,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.058,
+        "profundidadOperacionM": 500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "prop-medio-v5-v8",
+      "tipo": "propulsion",
+      "nombre": "Propulsor medio de crucero de alto rendimiento",
+      "archivo": "modulo-propulsion.glb",
+      "masaKg": 81.648,
+      "volumenM3": 0.0454,
+      "cdaM2": 0.0726,
+      "empujeMaxN": 1360.8,
+      "potenciaNominalW": 4536,
+      "eficiencia": 0.55,
+      "profundidadDisenoM": 2000,
+      "costoUsd": 12700.8,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.726,
+        "ancho": 0.635,
+        "alto": 0.635
+      },
+      "descripcion": "Configuración de alto rendimiento; variante 8 de propulsion. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 81.648,
+        "volumenDesplazadoM3": 0.0454,
+        "densidadKgM3": 1798.41,
+        "coeficienteArrastreAreaM2": 0.0726,
+        "profundidadOperacionM": 2000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-pequeno-v4",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre pequeño compacto",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 69.6,
+      "volumenM3": 0.348,
+      "cdaM2": 0.0464,
+      "bombaM3s": 0.0116,
+      "consumoBombaW": 174,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 2900,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.16,
+        "ancho": 0.696,
+        "alto": 0.58
+      },
+      "descripcion": "Configuración compacto; variante 4 de lastre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 69.6,
+        "volumenDesplazadoM3": 0.348,
+        "densidadKgM3": 200,
+        "coeficienteArrastreAreaM2": 0.0464,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-mediano-v5",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre mediano de precisión",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 92.4,
+      "volumenM3": 0.504,
+      "cdaM2": 0.0504,
+      "bombaM3s": 0.0126,
+      "consumoBombaW": 184.8,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3528,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.092,
+        "ancho": 0.672,
+        "alto": 0.504
+      },
+      "descripcion": "Configuración de precisión; variante 5 de lastre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 92.4,
+        "volumenDesplazadoM3": 0.504,
+        "densidadKgM3": 183.33,
+        "coeficienteArrastreAreaM2": 0.0504,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-grande-v6",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre grande modular",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 193.2,
+      "volumenM3": 1.104,
+      "cdaM2": 0.0828,
+      "bombaM3s": 0.0184,
+      "consumoBombaW": 322,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 6900,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.472,
+        "ancho": 0.828,
+        "alto": 0.69
+      },
+      "descripcion": "Configuración modular; variante 6 de lastre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 193.2,
+        "volumenDesplazadoM3": 1.104,
+        "densidadKgM3": 175,
+        "coeficienteArrastreAreaM2": 0.0828,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-pequeno-v4-v7",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre pequeño compacto de respuesta rápida",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 69.6,
+      "volumenM3": 0.348,
+      "cdaM2": 0.0464,
+      "bombaM3s": 0.0116,
+      "consumoBombaW": 174,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 2900,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.16,
+        "ancho": 0.696,
+        "alto": 0.58
+      },
+      "descripcion": "Configuración de respuesta rápida; variante 7 de lastre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 69.6,
+        "volumenDesplazadoM3": 0.348,
+        "densidadKgM3": 200,
+        "coeficienteArrastreAreaM2": 0.0464,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "lastre-mediano-v5-v8",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre mediano de precisión de gran capacidad",
+      "archivo": "tanque-lastre.glb",
+      "masaKg": 99.792,
+      "volumenM3": 0.5443,
+      "cdaM2": 0.0544,
+      "bombaM3s": 0.0136,
+      "consumoBombaW": 199.584,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3810.24,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.179,
+        "ancho": 0.726,
+        "alto": 0.544
+      },
+      "descripcion": "Configuración de gran capacidad; variante 8 de lastre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 99.792,
+        "volumenDesplazadoM3": 0.5443,
+        "densidadKgM3": 183.34,
+        "coeficienteArrastreAreaM2": 0.0544,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-300-v4",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 300 m reforzado",
+      "archivo": "cabina-control.glb",
+      "masaKg": 40.6,
+      "volumenM3": 0.232,
+      "cdaM2": 0.058,
+      "profundidadDisenoM": 300,
+      "costoUsd": 3480,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 1.044,
+        "ancho": 1.044,
+        "alto": 0.812
+      },
+      "descripcion": "Configuración reforzado; variante 4 de cabina. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 40.6,
+        "volumenDesplazadoM3": 0.232,
+        "densidadKgM3": 175,
+        "coeficienteArrastreAreaM2": 0.058,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-1000-v5",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 1000 m compacto",
+      "archivo": "cabina-control.glb",
+      "masaKg": 75.6,
+      "volumenM3": 0.1848,
+      "cdaM2": 0.042,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 7560,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 0.798,
+        "ancho": 0.798,
+        "alto": 0.63
+      },
+      "descripcion": "Configuración compacto; variante 5 de cabina. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 75.6,
+        "volumenDesplazadoM3": 0.1848,
+        "densidadKgM3": 409.09,
+        "coeficienteArrastreAreaM2": 0.042,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-4000-v6",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 4000 m panorámico",
+      "archivo": "cabina-control.glb",
+      "masaKg": 239.2,
+      "volumenM3": 0.23,
+      "cdaM2": 0.0552,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 27600,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 0.92,
+        "ancho": 0.92,
+        "alto": 0.736
+      },
+      "descripcion": "Configuración panorámico; variante 6 de cabina. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 239.2,
+        "volumenDesplazadoM3": 0.23,
+        "densidadKgM3": 1040,
+        "coeficienteArrastreAreaM2": 0.0552,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-300-v4-v7",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 300 m reforzado de alta presión",
+      "archivo": "cabina-control.glb",
+      "masaKg": 40.6,
+      "volumenM3": 0.232,
+      "cdaM2": 0.058,
+      "profundidadDisenoM": 300,
+      "costoUsd": 3480,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 1.044,
+        "ancho": 1.044,
+        "alto": 0.812
+      },
+      "descripcion": "Configuración de alta presión; variante 7 de cabina. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 40.6,
+        "volumenDesplazadoM3": 0.232,
+        "densidadKgM3": 175,
+        "coeficienteArrastreAreaM2": 0.058,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "domo-1000-v5-v8",
+      "tipo": "cabina",
+      "nombre": "Domo acrílico 1000 m compacto de observación",
+      "archivo": "cabina-control.glb",
+      "masaKg": 81.648,
+      "volumenM3": 0.1996,
+      "cdaM2": 0.0454,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 8164.8,
+      "material": "acrilico-pmma",
+      "visual": {
+        "largo": 0.862,
+        "ancho": 0.862,
+        "alto": 0.68
+      },
+      "descripcion": "Configuración de observación; variante 8 de cabina. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 81.648,
+        "volumenDesplazadoM3": 0.1996,
+        "densidadKgM3": 409.06,
+        "coeficienteArrastreAreaM2": 0.0454,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-pequenas-v3",
+      "tipo": "aletas",
+      "nombre": "Aletas pequeñas estabilizadoras",
+      "archivo": "aletas.glb",
+      "masaKg": 32.4,
+      "volumenM3": 0.0216,
+      "cdaM2": 0.0324,
+      "areaAletasM2": 0.432,
+      "consumoW": 32.4,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 1944,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.54,
+        "ancho": 1.512,
+        "alto": 0.54
+      },
+      "descripcion": "Configuración estabilizadoras; variante 3 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 32.4,
+        "volumenDesplazadoM3": 0.0216,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.0324,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-grandes-v4",
+      "tipo": "aletas",
+      "nombre": "Aletas grandes plegables",
+      "archivo": "aletas.glb",
+      "masaKg": 69.6,
+      "volumenM3": 0.0464,
+      "cdaM2": 0.0696,
+      "areaAletasM2": 1.044,
+      "consumoW": 52.2,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3944,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.812,
+        "ancho": 2.32,
+        "alto": 0.812
+      },
+      "descripcion": "Configuración plegables; variante 4 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 69.6,
+        "volumenDesplazadoM3": 0.0464,
+        "densidadKgM3": 1500,
+        "coeficienteArrastreAreaM2": 0.0696,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-pequenas-v3-v5",
+      "tipo": "aletas",
+      "nombre": "Aletas pequeñas estabilizadoras de profundidad",
+      "archivo": "aletas.glb",
+      "masaKg": 27.216,
+      "volumenM3": 0.0181,
+      "cdaM2": 0.0272,
+      "areaAletasM2": 0.3629,
+      "consumoW": 27.216,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 1632.96,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.454,
+        "ancho": 1.27,
+        "alto": 0.454
+      },
+      "descripcion": "Configuración de profundidad; variante 5 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 27.216,
+        "volumenDesplazadoM3": 0.0181,
+        "densidadKgM3": 1503.65,
+        "coeficienteArrastreAreaM2": 0.0272,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-grandes-v4-v6",
+      "tipo": "aletas",
+      "nombre": "Aletas grandes plegables de alta precisión",
+      "archivo": "aletas.glb",
+      "masaKg": 64.032,
+      "volumenM3": 0.0427,
+      "cdaM2": 0.064,
+      "areaAletasM2": 0.9605,
+      "consumoW": 48.024,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3628.48,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.747,
+        "ancho": 2.134,
+        "alto": 0.747
+      },
+      "descripcion": "Configuración de alta precisión; variante 6 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 64.032,
+        "volumenDesplazadoM3": 0.0427,
+        "densidadKgM3": 1499.58,
+        "coeficienteArrastreAreaM2": 0.064,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-pequenas-v3-v5-v7",
+      "tipo": "aletas",
+      "nombre": "Aletas pequeñas estabilizadoras de profundidad hidrodinámicas",
+      "archivo": "aletas.glb",
+      "masaKg": 27.216,
+      "volumenM3": 0.0181,
+      "cdaM2": 0.0272,
+      "areaAletasM2": 0.3629,
+      "consumoW": 27.216,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 1632.96,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.454,
+        "ancho": 1.27,
+        "alto": 0.454
+      },
+      "descripcion": "Configuración hidrodinámicas; variante 7 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 27.216,
+        "volumenDesplazadoM3": 0.0181,
+        "densidadKgM3": 1503.65,
+        "coeficienteArrastreAreaM2": 0.0272,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "aletas-grandes-v4-v6-v8",
+      "tipo": "aletas",
+      "nombre": "Aletas grandes plegables de alta precisión de maniobra",
+      "archivo": "aletas.glb",
+      "masaKg": 69.1546,
+      "volumenM3": 0.0461,
+      "cdaM2": 0.0691,
+      "areaAletasM2": 1.0373,
+      "consumoW": 51.8659,
+      "profundidadDisenoM": 6000,
+      "costoUsd": 3918.7584,
+      "material": "aluminio-7075",
+      "visual": {
+        "largo": 0.807,
+        "ancho": 2.305,
+        "alto": 0.807
+      },
+      "descripcion": "Configuración de maniobra; variante 8 de aletas. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 69.1546,
+        "volumenDesplazadoM3": 0.0461,
+        "densidadKgM3": 1500.1,
+        "coeficienteArrastreAreaM2": 0.0691,
+        "profundidadOperacionM": 6000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-baja-v3",
+      "tipo": "torre",
+      "nombre": "Torre de acceso baja de observación",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 86.4,
+      "volumenM3": 0.162,
+      "cdaM2": 0.1296,
+      "areaLateralM2": 0.35,
+      "profundidadDisenoM": 600,
+      "costoUsd": 4320,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.864,
+        "ancho": 0.54,
+        "alto": 0.54
+      },
+      "descripcion": "Configuración de observación; variante 3 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 86.4,
+        "volumenDesplazadoM3": 0.162,
+        "densidadKgM3": 533.33,
+        "coeficienteArrastreAreaM2": 0.1296,
+        "profundidadOperacionM": 600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-alta-v4",
+      "tipo": "torre",
+      "nombre": "Torre de acceso alta reforzada",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 139.2,
+      "volumenM3": 0.348,
+      "cdaM2": 0.232,
+      "areaLateralM2": 0.7,
+      "profundidadDisenoM": 300,
+      "costoUsd": 6380,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.16,
+        "ancho": 0.696,
+        "alto": 1.044
+      },
+      "descripcion": "Configuración reforzada; variante 4 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 139.2,
+        "volumenDesplazadoM3": 0.348,
+        "densidadKgM3": 400,
+        "coeficienteArrastreAreaM2": 0.232,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-baja-v3-v5",
+      "tipo": "torre",
+      "nombre": "Torre de acceso baja de observación compacta",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 72.576,
+      "volumenM3": 0.1361,
+      "cdaM2": 0.1089,
+      "areaLateralM2": 0.35,
+      "profundidadDisenoM": 600,
+      "costoUsd": 3628.8,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.726,
+        "ancho": 0.454,
+        "alto": 0.454
+      },
+      "descripcion": "Configuración compacta; variante 5 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 72.576,
+        "volumenDesplazadoM3": 0.1361,
+        "densidadKgM3": 533.25,
+        "coeficienteArrastreAreaM2": 0.1089,
+        "profundidadOperacionM": 600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-alta-v4-v6",
+      "tipo": "torre",
+      "nombre": "Torre de acceso alta reforzada de rescate",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 128.064,
+      "volumenM3": 0.3202,
+      "cdaM2": 0.2134,
+      "areaLateralM2": 0.7,
+      "profundidadDisenoM": 300,
+      "costoUsd": 5869.6,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.067,
+        "ancho": 0.64,
+        "alto": 0.96
+      },
+      "descripcion": "Configuración de rescate; variante 6 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 128.064,
+        "volumenDesplazadoM3": 0.3202,
+        "densidadKgM3": 399.95,
+        "coeficienteArrastreAreaM2": 0.2134,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-baja-v3-v5-v7",
+      "tipo": "torre",
+      "nombre": "Torre de acceso baja de observación compacta perfil bajo",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 72.576,
+      "volumenM3": 0.1361,
+      "cdaM2": 0.1089,
+      "areaLateralM2": 0.35,
+      "profundidadDisenoM": 600,
+      "costoUsd": 3628.8,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 0.726,
+        "ancho": 0.454,
+        "alto": 0.454
+      },
+      "descripcion": "Configuración perfil bajo; variante 7 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 72.576,
+        "volumenDesplazadoM3": 0.1361,
+        "densidadKgM3": 533.25,
+        "coeficienteArrastreAreaM2": 0.1089,
+        "profundidadOperacionM": 600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "torre-alta-v4-v6-v8",
+      "tipo": "torre",
+      "nombre": "Torre de acceso alta reforzada de rescate de navegación",
+      "archivo": "torre-acceso.glb",
+      "masaKg": 138.3091,
+      "volumenM3": 0.3458,
+      "cdaM2": 0.2305,
+      "areaLateralM2": 0.7,
+      "profundidadDisenoM": 300,
+      "costoUsd": 6339.168,
+      "material": "acero-hy80",
+      "visual": {
+        "largo": 1.152,
+        "ancho": 0.691,
+        "alto": 1.037
+      },
+      "descripcion": "Configuración de navegación; variante 8 de torre. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 138.3091,
+        "volumenDesplazadoM3": 0.3458,
+        "densidadKgM3": 399.97,
+        "coeficienteArrastreAreaM2": 0.2305,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-plomo-10-v5",
+      "tipo": "bateria",
+      "nombre": "Batería plomo-ácido 10 kWh modular",
+      "archivo": "bateria.glb",
+      "masaKg": 277.2,
+      "capacidadWh": 8400,
+      "coefTempCapacidad": 0.008,
+      "costoUsd": 2940,
+      "visual": {
+        "largo": 0.672,
+        "ancho": 0.42,
+        "alto": 0.336
+      },
+      "descripcion": "Configuración modular; variante 5 de bateria. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 277.2,
+        "volumenDesplazadoM3": 0.02655,
+        "densidadKgM3": 10439.44,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-plomo-20-v6",
+      "tipo": "bateria",
+      "nombre": "Batería plomo-ácido 20 kWh de larga duración",
+      "archivo": "bateria.glb",
+      "masaKg": 607.2,
+      "capacidadWh": 18400,
+      "coefTempCapacidad": 0.008,
+      "costoUsd": 6440,
+      "visual": {
+        "largo": 0.92,
+        "ancho": 0.552,
+        "alto": 0.46
+      },
+      "descripcion": "Configuración de larga duración; variante 6 de bateria. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 607.2,
+        "volumenDesplazadoM3": 0.06541,
+        "densidadKgM3": 9283.01,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-litio-10-v7",
+      "tipo": "bateria",
+      "nombre": "Batería ion-litio 10 kWh compacta",
+      "archivo": "bateria.glb",
+      "masaKg": 85,
+      "capacidadWh": 10000,
+      "coefTempCapacidad": 0.004,
+      "costoUsd": 12000,
+      "visual": {
+        "largo": 0.7,
+        "ancho": 0.4,
+        "alto": 0.3
+      },
+      "descripcion": "Configuración compacta; variante 7 de bateria. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 85,
+        "volumenDesplazadoM3": 0.02352,
+        "densidadKgM3": 3613.95,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "bat-litio-20-v8",
+      "tipo": "bateria",
+      "nombre": "Batería ion-litio 20 kWh de alta densidad",
+      "archivo": "bateria.glb",
+      "masaKg": 183.6,
+      "capacidadWh": 21600,
+      "coefTempCapacidad": 0.004,
+      "costoUsd": 25920,
+      "visual": {
+        "largo": 0.972,
+        "ancho": 0.54,
+        "alto": 0.432
+      },
+      "descripcion": "Configuración de alta densidad; variante 8 de bateria. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 183.6,
+        "volumenDesplazadoM3": 0.06349,
+        "densidadKgM3": 2891.82,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-500-v4",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 500 kg compacto",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 580,
+      "soltable": true,
+      "costoUsd": 928,
+      "visual": {
+        "largo": 0.928,
+        "ancho": 0.464,
+        "alto": 0.232
+      },
+      "descripcion": "Configuración compacto; variante 4 de lastreFijo. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 580,
+        "volumenDesplazadoM3": 0.02797,
+        "densidadKgM3": 20735.57,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-1000-v5",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 1000 kg de equilibrio",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 840,
+      "soltable": true,
+      "costoUsd": 1344,
+      "visual": {
+        "largo": 0.84,
+        "ancho": 0.42,
+        "alto": 0.21
+      },
+      "descripcion": "Configuración de equilibrio; variante 5 de lastreFijo. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 840,
+        "volumenDesplazadoM3": 0.02074,
+        "densidadKgM3": 40492.39,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-2000-v6",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 2000 kg modular",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 1840,
+      "soltable": true,
+      "costoUsd": 2944,
+      "visual": {
+        "largo": 1.104,
+        "ancho": 0.552,
+        "alto": 0.276
+      },
+      "descripcion": "Configuración modular; variante 6 de lastreFijo. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 1840,
+        "volumenDesplazadoM3": 0.0471,
+        "densidadKgM3": 39069.92,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-500-v4-v7",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 500 kg compacto de ajuste fino",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 580,
+      "soltable": true,
+      "costoUsd": 928,
+      "visual": {
+        "largo": 0.928,
+        "ancho": 0.464,
+        "alto": 0.232
+      },
+      "descripcion": "Configuración de ajuste fino; variante 7 de lastreFijo. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 580,
+        "volumenDesplazadoM3": 0.02797,
+        "densidadKgM3": 20735.57,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "peso-1000-v5-v8",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de plomo 1000 kg de equilibrio de emergencia",
+      "archivo": "lastre-fijo.glb",
+      "masaKg": 907.2,
+      "soltable": true,
+      "costoUsd": 1451.52,
+      "visual": {
+        "largo": 0.907,
+        "ancho": 0.454,
+        "alto": 0.227
+      },
+      "descripcion": "Configuración de emergencia; variante 8 de lastreFijo. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 907.2,
+        "volumenDesplazadoM3": 0.02617,
+        "densidadKgM3": 34662.19,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-1000-v3",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 1000 m de alta flotación",
+      "archivo": "espuma.glb",
+      "masaKg": 216,
+      "volumenM3": 0.432,
+      "cdaM2": 0.0432,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 5400,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1.08,
+        "ancho": 0.648,
+        "alto": 0.324
+      },
+      "descripcion": "Configuración de alta flotación; variante 3 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 216,
+        "volumenDesplazadoM3": 0.432,
+        "densidadKgM3": 500,
+        "coeficienteArrastreAreaM2": 0.0432,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-4000-v4",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 4000 m compacta",
+      "archivo": "espuma.glb",
+      "masaKg": 301.6,
+      "volumenM3": 0.464,
+      "cdaM2": 0.0464,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 17400,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1.16,
+        "ancho": 0.696,
+        "alto": 0.348
+      },
+      "descripcion": "Configuración compacta; variante 4 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 301.6,
+        "volumenDesplazadoM3": 0.464,
+        "densidadKgM3": 650,
+        "coeficienteArrastreAreaM2": 0.0464,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-1000-v3-v5",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 1000 m de alta flotación reforzada",
+      "archivo": "espuma.glb",
+      "masaKg": 181.44,
+      "volumenM3": 0.3629,
+      "cdaM2": 0.0363,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 4536,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 0.907,
+        "ancho": 0.544,
+        "alto": 0.272
+      },
+      "descripcion": "Configuración reforzada; variante 5 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 181.44,
+        "volumenDesplazadoM3": 0.3629,
+        "densidadKgM3": 499.97,
+        "coeficienteArrastreAreaM2": 0.0363,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-4000-v4-v6",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 4000 m compacta de larga duración",
+      "archivo": "espuma.glb",
+      "masaKg": 277.472,
+      "volumenM3": 0.4269,
+      "cdaM2": 0.0427,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 16008,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1.067,
+        "ancho": 0.64,
+        "alto": 0.32
+      },
+      "descripcion": "Configuración de larga duración; variante 6 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 277.472,
+        "volumenDesplazadoM3": 0.4269,
+        "densidadKgM3": 649.97,
+        "coeficienteArrastreAreaM2": 0.0427,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-1000-v3-v5-v7",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 1000 m de alta flotación reforzada modular",
+      "archivo": "espuma.glb",
+      "masaKg": 181.44,
+      "volumenM3": 0.3629,
+      "cdaM2": 0.0363,
+      "profundidadDisenoM": 1000,
+      "costoUsd": 4536,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 0.907,
+        "ancho": 0.544,
+        "alto": 0.272
+      },
+      "descripcion": "Configuración modular; variante 7 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 181.44,
+        "volumenDesplazadoM3": 0.3629,
+        "densidadKgM3": 499.97,
+        "coeficienteArrastreAreaM2": 0.0363,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "espuma-4000-v4-v6-v8",
+      "tipo": "flotabilidad",
+      "nombre": "Espuma sintáctica 4000 m compacta de larga duración de gran profundidad",
+      "archivo": "espuma.glb",
+      "masaKg": 299.6698,
+      "volumenM3": 0.4611,
+      "cdaM2": 0.0461,
+      "profundidadDisenoM": 4000,
+      "costoUsd": 17288.64,
+      "material": "espuma-sintactica",
+      "visual": {
+        "largo": 1.152,
+        "ancho": 0.691,
+        "alto": 0.346
+      },
+      "descripcion": "Configuración de gran profundidad; variante 8 de flotabilidad. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 299.6698,
+        "volumenDesplazadoM3": 0.4611,
+        "densidadKgM3": 649.9,
+        "coeficienteArrastreAreaM2": 0.0461,
+        "profundidadOperacionM": 4000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-100-v3",
+      "tipo": "focos",
+      "nombre": "Focos LED 100 W de espectro amplio",
+      "archivo": "focos.glb",
+      "masaKg": 4.32,
+      "consumoW": 108,
+      "costoUsd": 540,
+      "visual": {
+        "largo": 0.324,
+        "ancho": 0.324,
+        "alto": 0.216
+      },
+      "alcanceLuzM": 10.8,
+      "descripcion": "Configuración de espectro amplio; variante 3 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 4.32,
+        "volumenDesplazadoM3": 0.00635,
+        "densidadKgM3": 680.43,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-300-v4",
+      "tipo": "focos",
+      "nombre": "Focos LED 300 W compactos",
+      "archivo": "focos.glb",
+      "masaKg": 9.28,
+      "consumoW": 348,
+      "costoUsd": 1740,
+      "visual": {
+        "largo": 0.406,
+        "ancho": 0.406,
+        "alto": 0.29
+      },
+      "alcanceLuzM": 29,
+      "descripcion": "Configuración compactos; variante 4 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 9.28,
+        "volumenDesplazadoM3": 0.01338,
+        "densidadKgM3": 693.33,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-100-v3-v5",
+      "tipo": "focos",
+      "nombre": "Focos LED 100 W de espectro amplio de bajo consumo",
+      "archivo": "focos.glb",
+      "masaKg": 3.6288,
+      "consumoW": 90.72,
+      "costoUsd": 453.6,
+      "visual": {
+        "largo": 0.272,
+        "ancho": 0.272,
+        "alto": 0.181
+      },
+      "alcanceLuzM": 9.072,
+      "descripcion": "Configuración de bajo consumo; variante 5 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 3.6288,
+        "volumenDesplazadoM3": 0.00375,
+        "densidadKgM3": 967.81,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-300-v4-v6",
+      "tipo": "focos",
+      "nombre": "Focos LED 300 W compactos de exploración",
+      "archivo": "focos.glb",
+      "masaKg": 8.5376,
+      "consumoW": 320.16,
+      "costoUsd": 1600.8,
+      "visual": {
+        "largo": 0.374,
+        "ancho": 0.374,
+        "alto": 0.267
+      },
+      "alcanceLuzM": 26.68,
+      "descripcion": "Configuración de exploración; variante 6 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 8.5376,
+        "volumenDesplazadoM3": 0.01046,
+        "densidadKgM3": 816.44,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-100-v3-v5-v7",
+      "tipo": "focos",
+      "nombre": "Focos LED 100 W de espectro amplio de bajo consumo LED dual",
+      "archivo": "focos.glb",
+      "masaKg": 3.6288,
+      "consumoW": 90.72,
+      "costoUsd": 453.6,
+      "visual": {
+        "largo": 0.272,
+        "ancho": 0.272,
+        "alto": 0.181
+      },
+      "alcanceLuzM": 9.072,
+      "descripcion": "Configuración LED dual; variante 7 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 3.6288,
+        "volumenDesplazadoM3": 0.00375,
+        "densidadKgM3": 967.81,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "led-300-v4-v6-v8",
+      "tipo": "focos",
+      "nombre": "Focos LED 300 W compactos de exploración de largo alcance",
+      "archivo": "focos.glb",
+      "masaKg": 9.2206,
+      "consumoW": 345.7728,
+      "costoUsd": 1728.864,
+      "visual": {
+        "largo": 0.404,
+        "ancho": 0.404,
+        "alto": 0.288
+      },
+      "alcanceLuzM": 28.8144,
+      "descripcion": "Configuración de largo alcance; variante 8 de focos. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 9.2206,
+        "volumenDesplazadoM3": 0.01316,
+        "densidadKgM3": 700.56,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-basico-v3",
+      "tipo": "sonar",
+      "nombre": "Sonar básico compacto",
+      "archivo": "sonar.glb",
+      "masaKg": 8.64,
+      "consumoW": 32.4,
+      "alcanceM": 108,
+      "costoUsd": 4320,
+      "visual": {
+        "largo": 0.324,
+        "ancho": 0.324,
+        "alto": 0.216
+      },
+      "descripcion": "Configuración compacto; variante 3 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 8.64,
+        "volumenDesplazadoM3": 0.00635,
+        "densidadKgM3": 1360.86,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-alto-v4",
+      "tipo": "sonar",
+      "nombre": "Sonar de largo alcance de largo alcance",
+      "archivo": "sonar.glb",
+      "masaKg": 23.2,
+      "consumoW": 92.8,
+      "alcanceM": 348,
+      "costoUsd": 13920,
+      "visual": {
+        "largo": 0.464,
+        "ancho": 0.464,
+        "alto": 0.348
+      },
+      "descripcion": "Configuración de largo alcance; variante 4 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 23.2,
+        "volumenDesplazadoM3": 0.02098,
+        "densidadKgM3": 1105.9,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-basico-v3-v5",
+      "tipo": "sonar",
+      "nombre": "Sonar básico compacto multihaz",
+      "archivo": "sonar.glb",
+      "masaKg": 7.2576,
+      "consumoW": 27.216,
+      "alcanceM": 90.72,
+      "costoUsd": 3628.8,
+      "visual": {
+        "largo": 0.272,
+        "ancho": 0.272,
+        "alto": 0.181
+      },
+      "descripcion": "Configuración multihaz; variante 5 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 7.2576,
+        "volumenDesplazadoM3": 0.00375,
+        "densidadKgM3": 1935.61,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-alto-v4-v6",
+      "tipo": "sonar",
+      "nombre": "Sonar de largo alcance de largo alcance de navegación",
+      "archivo": "sonar.glb",
+      "masaKg": 21.344,
+      "consumoW": 85.376,
+      "alcanceM": 320.16,
+      "costoUsd": 12806.4,
+      "visual": {
+        "largo": 0.427,
+        "ancho": 0.427,
+        "alto": 0.32
+      },
+      "descripcion": "Configuración de navegación; variante 6 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 21.344,
+        "volumenDesplazadoM3": 0.01634,
+        "densidadKgM3": 1306.51,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-basico-v3-v5-v7",
+      "tipo": "sonar",
+      "nombre": "Sonar básico compacto multihaz de barrido amplio",
+      "archivo": "sonar.glb",
+      "masaKg": 7.2576,
+      "consumoW": 27.216,
+      "alcanceM": 90.72,
+      "costoUsd": 3628.8,
+      "visual": {
+        "largo": 0.272,
+        "ancho": 0.272,
+        "alto": 0.181
+      },
+      "descripcion": "Configuración de barrido amplio; variante 7 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 7.2576,
+        "volumenDesplazadoM3": 0.00375,
+        "densidadKgM3": 1935.61,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "sonar-alto-v4-v6-v8",
+      "tipo": "sonar",
+      "nombre": "Sonar de largo alcance de largo alcance de navegación de alta resolución",
+      "archivo": "sonar.glb",
+      "masaKg": 23.0515,
+      "consumoW": 92.2061,
+      "alcanceM": 345.7728,
+      "costoUsd": 13830.912,
+      "visual": {
+        "largo": 0.461,
+        "ancho": 0.461,
+        "alto": 0.346
+      },
+      "descripcion": "Configuración de alta resolución; variante 8 de sonar. Parámetros ajustados para comparar rendimiento, masa y consumo en el diseño.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 23.0515,
+        "volumenDesplazadoM3": 0.02059,
+        "densidadKgM3": 1119.6,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": null,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-navegacion",
+      "tipo": "controles",
+      "nombre": "Timón y panel de navegación",
+      "archivo": "controles-navegacion.glb",
+      "masaKg": 18,
+      "costoUsd": 4200,
+      "profundidadDisenoM": 1200,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Conjunto interior con rueda de dirección, panel de navegación, palancas y relojes de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 18,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 107.41,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-optico",
+      "tipo": "periscopio",
+      "nombre": "Periscopio óptico retráctil",
+      "archivo": "periscopio.glb",
+      "masaKg": 34,
+      "costoUsd": 7800,
+      "profundidadDisenoM": 800,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical metálico con cabezal óptico y sistema de observación orientable.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 34,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 734.26,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 800,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-reforzadas",
+      "tipo": "portillas",
+      "nombre": "Portillas circulares reforzadas",
+      "archivo": "portillas.glb",
+      "masaKg": 42,
+      "costoUsd": 5600,
+      "profundidadDisenoM": 500,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Dos ventanas circulares con marcos metálicos y cristales gruesos reforzados.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 42,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 564.59,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-hermetica",
+      "tipo": "escotilla",
+      "nombre": "Escotilla hermética articulada",
+      "archivo": "escotilla.glb",
+      "masaKg": 56,
+      "costoUsd": 6900,
+      "profundidadDisenoM": 1200,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta estanca con bisagras y cierre mecánico; haz clic sobre la tapa para abrirla o cerrarla.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 56,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 835.42,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-ergonomico",
+      "tipo": "controles",
+      "nombre": "Timón ergonómico",
+      "archivo": "controles.glb",
+      "masaKg": 18,
+      "costoUsd": 4200,
+      "profundidadDisenoM": 1200,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 18,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 107.41,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-compacto",
+      "tipo": "controles",
+      "nombre": "Consola compacta",
+      "archivo": "controles.glb",
+      "masaKg": 14,
+      "costoUsd": 3600,
+      "profundidadDisenoM": 900,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 14,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 83.54,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 900,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-doble",
+      "tipo": "controles",
+      "nombre": "Panel doble de navegación",
+      "archivo": "controles.glb",
+      "masaKg": 24,
+      "costoUsd": 5900,
+      "profundidadDisenoM": 1600,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 24,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 143.22,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-analogico",
+      "tipo": "controles",
+      "nombre": "Panel analógico clásico",
+      "archivo": "controles.glb",
+      "masaKg": 20,
+      "costoUsd": 4500,
+      "profundidadDisenoM": 1000,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 20,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 119.35,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-digital",
+      "tipo": "controles",
+      "nombre": "Panel digital integrado",
+      "archivo": "controles.glb",
+      "masaKg": 22,
+      "costoUsd": 6800,
+      "profundidadDisenoM": 1400,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 22,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 131.28,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1400,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-reforzado",
+      "tipo": "controles",
+      "nombre": "Controles reforzados",
+      "archivo": "controles.glb",
+      "masaKg": 28,
+      "costoUsd": 7400,
+      "profundidadDisenoM": 2200,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 28,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 167.08,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "controles-cientifico",
+      "tipo": "controles",
+      "nombre": "Consola científica",
+      "archivo": "controles.glb",
+      "masaKg": 26,
+      "costoUsd": 8100,
+      "profundidadDisenoM": 1800,
+      "visual": {
+        "largo": 0.48,
+        "ancho": 0.72,
+        "alto": 0.52
+      },
+      "descripcion": "Timón de dirección, mandos y panel de instrumentos con lecturas de profundidad y presión.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 26,
+        "volumenDesplazadoM3": 0.16758,
+        "densidadKgM3": 155.15,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1800,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-compacto",
+      "tipo": "periscopio",
+      "nombre": "Periscopio compacto",
+      "archivo": "periscopio.glb",
+      "masaKg": 27,
+      "costoUsd": 6500,
+      "profundidadDisenoM": 500,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 27,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 583.09,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-largo",
+      "tipo": "periscopio",
+      "nombre": "Periscopio de gran alcance",
+      "archivo": "periscopio.glb",
+      "masaKg": 42,
+      "costoUsd": 9200,
+      "profundidadDisenoM": 1000,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 42,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 907.03,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-doble",
+      "tipo": "periscopio",
+      "nombre": "Periscopio de doble óptica",
+      "archivo": "periscopio.glb",
+      "masaKg": 48,
+      "costoUsd": 11200,
+      "profundidadDisenoM": 1200,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 48,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 1036.61,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-digital",
+      "tipo": "periscopio",
+      "nombre": "Periscopio electroóptico",
+      "archivo": "periscopio.glb",
+      "masaKg": 39,
+      "costoUsd": 13500,
+      "profundidadDisenoM": 1500,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 39,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 842.24,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-reforzado",
+      "tipo": "periscopio",
+      "nombre": "Periscopio reforzado",
+      "archivo": "periscopio.glb",
+      "masaKg": 52,
+      "costoUsd": 12800,
+      "profundidadDisenoM": 2200,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 52,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 1122.99,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-panoramico",
+      "tipo": "periscopio",
+      "nombre": "Periscopio panorámico",
+      "archivo": "periscopio.glb",
+      "masaKg": 46,
+      "costoUsd": 15400,
+      "profundidadDisenoM": 1800,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 46,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 993.41,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1800,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "periscopio-cientifico",
+      "tipo": "periscopio",
+      "nombre": "Periscopio científico",
+      "archivo": "periscopio.glb",
+      "masaKg": 44,
+      "costoUsd": 16700,
+      "profundidadDisenoM": 2500,
+      "visual": {
+        "largo": 0.22,
+        "ancho": 0.22,
+        "alto": 0.85
+      },
+      "descripcion": "Tubo vertical, cabezal óptico y conjunto de observación.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 44,
+        "volumenDesplazadoM3": 0.04631,
+        "densidadKgM3": 950.22,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-compactas",
+      "tipo": "portillas",
+      "nombre": "Portillas compactas",
+      "archivo": "portillas.glb",
+      "masaKg": 31,
+      "costoUsd": 4200,
+      "profundidadDisenoM": 300,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 31,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 416.72,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 300,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-panoramicas",
+      "tipo": "portillas",
+      "nombre": "Portillas panorámicas",
+      "archivo": "portillas.glb",
+      "masaKg": 58,
+      "costoUsd": 8200,
+      "profundidadDisenoM": 700,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 58,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 779.67,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 700,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-titanio",
+      "tipo": "portillas",
+      "nombre": "Portillas con marco de titanio",
+      "archivo": "portillas.glb",
+      "masaKg": 49,
+      "costoUsd": 9700,
+      "profundidadDisenoM": 1200,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 49,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 658.69,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-doblecristal",
+      "tipo": "portillas",
+      "nombre": "Portillas de doble cristal",
+      "archivo": "portillas.glb",
+      "masaKg": 55,
+      "costoUsd": 10500,
+      "profundidadDisenoM": 1600,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 55,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 739.34,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1600,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-profundidad",
+      "tipo": "portillas",
+      "nombre": "Portillas para gran profundidad",
+      "archivo": "portillas.glb",
+      "masaKg": 72,
+      "costoUsd": 14200,
+      "profundidadDisenoM": 2500,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 72,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 967.87,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-cientificas",
+      "tipo": "portillas",
+      "nombre": "Portillas de observación científica",
+      "archivo": "portillas.glb",
+      "masaKg": 61,
+      "costoUsd": 12800,
+      "profundidadDisenoM": 2000,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 61,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 820,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "portillas-blindadas",
+      "tipo": "portillas",
+      "nombre": "Portillas blindadas",
+      "archivo": "portillas.glb",
+      "masaKg": 84,
+      "costoUsd": 16900,
+      "profundidadDisenoM": 3200,
+      "visual": {
+        "largo": 0.52,
+        "ancho": 0.18,
+        "alto": 0.52
+      },
+      "descripcion": "Ventanas circulares con marco metálico y cristal reforzado.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 84,
+        "volumenDesplazadoM3": 0.07439,
+        "densidadKgM3": 1129.18,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 3200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-compacta",
+      "tipo": "escotilla",
+      "nombre": "Escotilla compacta",
+      "archivo": "escotilla.glb",
+      "masaKg": 43,
+      "costoUsd": 5600,
+      "profundidadDisenoM": 700,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 43,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 641.48,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 700,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-reforzada",
+      "tipo": "escotilla",
+      "nombre": "Escotilla reforzada",
+      "archivo": "escotilla.glb",
+      "masaKg": 68,
+      "costoUsd": 8900,
+      "profundidadDisenoM": 1800,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 68,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 1014.44,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 1800,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-titanio",
+      "tipo": "escotilla",
+      "nombre": "Escotilla de titanio",
+      "archivo": "escotilla.glb",
+      "masaKg": 62,
+      "costoUsd": 11900,
+      "profundidadDisenoM": 2400,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 62,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 924.93,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2400,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-doble",
+      "tipo": "escotilla",
+      "nombre": "Escotilla de doble cierre",
+      "archivo": "escotilla.glb",
+      "masaKg": 74,
+      "costoUsd": 10800,
+      "profundidadDisenoM": 2200,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 74,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 1103.95,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2200,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-manual",
+      "tipo": "escotilla",
+      "nombre": "Escotilla de cierre manual",
+      "archivo": "escotilla.glb",
+      "masaKg": 51,
+      "costoUsd": 6200,
+      "profundidadDisenoM": 900,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 51,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 760.83,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 900,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-automatica",
+      "tipo": "escotilla",
+      "nombre": "Escotilla de cierre asistido",
+      "archivo": "escotilla.glb",
+      "masaKg": 79,
+      "costoUsd": 14600,
+      "profundidadDisenoM": 2000,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 79,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 1178.54,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 2000,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    },
+    {
+      "id": "escotilla-profunda",
+      "tipo": "escotilla",
+      "nombre": "Escotilla de alta presión",
+      "archivo": "escotilla.glb",
+      "masaKg": 91,
+      "costoUsd": 18500,
+      "profundidadDisenoM": 3500,
+      "visual": {
+        "largo": 0.62,
+        "ancho": 0.62,
+        "alto": 0.14
+      },
+      "descripcion": "Puerta hermética articulada con bisagras y cierre; clic para animar su apertura.",
+      "propiedadesFisicas": {
+        "masaSecaKg": 91,
+        "volumenDesplazadoM3": 0.06703,
+        "densidadKgM3": 1357.56,
+        "coeficienteArrastreAreaM2": 0,
+        "profundidadOperacionM": 3500,
+        "centroMasaRelativo": [
+          0,
+          0,
+          0
+        ],
+        "nota": "Valores de catálogo o estimaciones geométricas; calibrar con la pieza física real."
+      }
+    }
+  ]
+}

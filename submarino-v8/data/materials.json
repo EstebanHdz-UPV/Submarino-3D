@@ -1,0 +1,110 @@
+{
+  "_nota": "Propiedades en SI. Cada material indica su fuente en `fuente`; los que dicen SIN validar siguen pendientes.",
+  "materiales": [
+    {
+      "id": "aluminio-6061",
+      "nombre": "Aluminio 6061-T6",
+      "densidadKgM3": 2700,
+      "limiteElasticoMPa": 276,
+      "moduloGPa": 68.9,
+      "poisson": 0.33,
+      "costoUsdKg": 4,
+      "uso": "Poca profundidad, económico y fácil de trabajar",
+      "profundidadRecomendadaM": [
+        0,
+        100
+      ],
+      "fuente": "ASM Aerospace Specification Metals, ficha \"Aluminum 6061-T6; 6061-T651\" (asm.matweb.com, bassnum=ma6061t6): 2,70 g/cm³, fluencia 276 MPa, E = 68,9 GPa, ν = 0,33."
+    },
+    {
+      "id": "aluminio-7075",
+      "nombre": "Aluminio 7075-T6",
+      "densidadKgM3": 2810,
+      "limiteElasticoMPa": 503,
+      "moduloGPa": 71.7,
+      "poisson": 0.33,
+      "costoUsdKg": 8,
+      "uso": "Profundidad media, buena relación resistencia/peso",
+      "profundidadRecomendadaM": [
+        0,
+        300
+      ],
+      "fuente": "ASM Aerospace Specification Metals, ficha \"Aluminum 7075-T6; 7075-T651\" (asm.matweb.com, bassnum=ma7075t6): 2,81 g/cm³, fluencia 503 MPa, E = 71,7 GPa, ν = 0,33."
+    },
+    {
+      "id": "acero-hy80",
+      "nombre": "Acero HY-80",
+      "densidadKgM3": 7746,
+      "limiteElasticoMPa": 552,
+      "moduloGPa": 207,
+      "poisson": 0.3,
+      "costoUsdKg": 7,
+      "uso": "Cascos resistentes; mayor masa que exige más flotabilidad",
+      "profundidadRecomendadaM": [
+        0,
+        1000
+      ],
+      "fuente": "MIL-S-16216 (fluencia mínima 80 ksi = 552 MPa); propiedades elásticas y densidad de la tabla de HY-80 (E = 207 GPa, ν = 0,30, 7746 kg/m³) citada en Wikipedia \"HY-80\"."
+    },
+    {
+      "id": "titanio-6al4v",
+      "nombre": "Titanio Ti-6Al-4V",
+      "densidadKgM3": 4430,
+      "limiteElasticoMPa": 880,
+      "moduloGPa": 113.8,
+      "poisson": 0.342,
+      "costoUsdKg": 40,
+      "uso": "Gran profundidad; muy costoso",
+      "profundidadRecomendadaM": [
+        0,
+        4000
+      ],
+      "fuente": "ASM Aerospace Specification Metals, ficha \"Titanium Ti-6Al-4V (Grade 5), Annealed\": 4,43 g/cm³, fluencia 880 MPa, E = 113,8 GPa, ν = 0,342."
+    },
+    {
+      "id": "compuesto-carbono",
+      "nombre": "Compuesto de fibra de carbono",
+      "densidadKgM3": 1600,
+      "limiteElasticoMPa": 550,
+      "moduloGPa": 70,
+      "poisson": 0.3,
+      "costoUsdKg": 80,
+      "uso": "Muy ligero; sensible a imperfecciones y delaminación",
+      "profundidadRecomendadaM": [
+        0,
+        600
+      ],
+      "fuente": "Valor de referencia del equipo (laminado cuasi-isótropo). Varía mucho según fibra, resina y orientación: SIN validar con ficha técnica."
+    },
+    {
+      "id": "acrilico-pmma",
+      "nombre": "Acrílico PMMA",
+      "densidadKgM3": 1180,
+      "limiteElasticoMPa": 110,
+      "moduloGPa": 3.0,
+      "poisson": 0.37,
+      "costoUsdKg": 6,
+      "uso": "Visores y domos transparentes (compresión)",
+      "profundidadRecomendadaM": [
+        0,
+        4000
+      ],
+      "fuente": "Valor de referencia del equipo para resistencia a compresión del PMMA. SIN validar con ficha técnica del fabricante del domo."
+    },
+    {
+      "id": "espuma-sintactica",
+      "nombre": "Espuma sintáctica",
+      "densidadKgM3": 500,
+      "limiteElasticoMPa": 30,
+      "moduloGPa": 1.5,
+      "poisson": 0.3,
+      "costoUsdKg": 30,
+      "uso": "Flotabilidad fija según profundidad nominal",
+      "profundidadRecomendadaM": [
+        0,
+        4000
+      ],
+      "fuente": "Orden de magnitud contrastado: espuma para 3000 m ≈ 0,5 g/cm³ (patente US 6,153,294) y bloque Alseamar HP4000 de 430 kg/m³ para 4000 m. 500 kg/m³ es conservador."
+    }
+  ]
+}

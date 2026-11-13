@@ -1,0 +1,2 @@
+Babylon.js 9.32.0 (paquete npm "babylonjs"), loader glTF 9.32.0 (paquete npm "babylonjs-loaders").
+Licencia Apache 2.0 (ver LICENSE.md). Copiados una sola vez; el proyecto no depende de npm para ejecutarse.

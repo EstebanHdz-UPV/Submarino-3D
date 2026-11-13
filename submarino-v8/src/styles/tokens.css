@@ -1,0 +1,18 @@
+/* Design tokens: paleta NAUTILUS (azul marino + cian). Sin fuentes externas (RNF: sin internet). */
+:root {
+  --bg: #07192a;
+  --bg-2: #0a2236;
+  --panel: #0c293c;
+  --panel-2: #103550;
+  --borde: #1c4a63;
+  --texto: #e6f2f7;
+  --tenue: #8fb0bf;
+  --acento: #0a7f9c;      /* relleno de botones: contraste 4.6:1 con texto blanco */
+  --acento-2: #43c9e7;    /* resaltes, bordes activos, enlaces */
+  --ok: #3ddc84;
+  --aviso: #ffb020;
+  --error: #ff5a5a;
+  --radio: 10px;
+  --fuente: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --sombra: 0 4px 18px rgba(0, 0, 0, .35);
+}

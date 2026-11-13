@@ -1,0 +1,199 @@
+{
+  "id": "rubrica-steam-submarino",
+  "version": "1.0.0",
+  "proyecto_id": "submarino-exploracion-3d",
+  "estado": "oficial",
+  "fecha": "2026-11-10",
+  "descripcion": "Rúbrica analítica con la que evaluacion.js califica a cada alumno (0–100) a partir de la telemetría de la Ruta STEAM y del simulador. Sustituye a la plantilla R1–R8.",
+  "uso": "src/core/evaluacion.js toma de aquí los pesos por dimensión (pesosDesdeRubrica): si el profesor cambia un peso, basta con editar este archivo. Los umbrales de nivel deben coincidir con NIVELES_DESEMPENO de evaluacion.js; tests/core/rubrica.test.js falla si se desalinean.",
+  "escala": {
+    "minimo": 0,
+    "maximo": 100,
+    "aprobatorio": 50
+  },
+  "niveles": [
+    {
+      "id": 4,
+      "nombre": "Excelente",
+      "minimo": 85,
+      "descripcion": "Domina el criterio y lo aplica sin ayuda; la evidencia es completa y correcta."
+    },
+    {
+      "id": 3,
+      "nombre": "Bueno",
+      "minimo": 70,
+      "descripcion": "Cumple el criterio con errores menores que no afectan el resultado."
+    },
+    {
+      "id": 2,
+      "nombre": "Suficiente",
+      "minimo": 50,
+      "descripcion": "Cumple lo esencial, con errores o evidencia incompleta."
+    },
+    {
+      "id": 1,
+      "nombre": "Insuficiente",
+      "minimo": 0,
+      "descripcion": "No cumple el criterio o no hay evidencia."
+    }
+  ],
+  "criterios": [
+    {
+      "id": "R-M",
+      "dimension": "M",
+      "criterio": "Matemáticas: cálculo hidrostático y lastre",
+      "peso": 20,
+      "objetivos": [
+        "OE-01",
+        "OE-02"
+      ],
+      "evidencia": "Eventos matematicas_intento de la Fase M (compuerta de cálculo) y cuestionario del módulo M.",
+      "descriptores": {
+        "4": "Calcula P = ρ·g·h correctamente al primer intento, con unidades SI, y elige un lastre coherente con la profundidad.",
+        "3": "Calcula la presión correctamente tras algún intento fallido; el lastre elegido es razonable.",
+        "2": "Llega al resultado con varios errores o con unidades mezcladas.",
+        "1": "No completa el cálculo o el resultado es incorrecto."
+      }
+    },
+    {
+      "id": "R-S",
+      "dimension": "S",
+      "criterio": "Ciencias: flotabilidad (Arquímedes) y límites de presión",
+      "peso": 20,
+      "objetivos": [
+        "OE-01",
+        "OE-02"
+      ],
+      "evidencia": "Eventos ciencia_intento de la Fase S (|B − W| ≤ 5 %), colapsos y choques registrados en el simulador.",
+      "descriptores": {
+        "4": "Calibra la flotabilidad neutra (|B − W| ≤ 5 %) y navega sin colapsos ni choques repetidos.",
+        "3": "Logra la flotabilidad neutra con ayuda de varios intentos; sin colapsos.",
+        "2": "Entiende la relación empuje-peso pero no logra el equilibrio o tiene un colapso.",
+        "1": "No relaciona empuje, peso y presión; colapsos o choques frecuentes."
+      }
+    },
+    {
+      "id": "R-E",
+      "dimension": "E",
+      "criterio": "Ingeniería: ensamblaje y validación del prototipo",
+      "peso": 25,
+      "objetivos": [
+        "OE-01",
+        "OE-03"
+      ],
+      "evidencia": "Eventos objeto_colocado (piezas distintas en el ensamblaje 3D) y dictamen de las pruebas.",
+      "descriptores": {
+        "4": "Ensambla 5 o más subsistemas compatibles y corrige el diseño a partir del dictamen de prueba.",
+        "3": "Ensambla 4 subsistemas compatibles y ejecuta al menos una prueba.",
+        "2": "Ensambla 3 subsistemas; el diseño no se valida con pruebas.",
+        "1": "Menos de 3 subsistemas o diseño sin piezas obligatorias."
+      }
+    },
+    {
+      "id": "R-T",
+      "dimension": "T",
+      "criterio": "Tecnología: control automático por bloques y pilotaje",
+      "peso": 20,
+      "objetivos": [
+        "OE-01",
+        "OE-04"
+      ],
+      "evidencia": "Eventos programa_ejecutado (orden leer → comparar → ajustar), recorrido en coordenadas X, Y, Z y actividad.",
+      "descriptores": {
+        "4": "Programa el control de profundidad en el orden correcto y pilota el submarino con actividad constante.",
+        "3": "Programa correctamente tras algún intento y recorre el escenario.",
+        "2": "El programa tiene el orden incorrecto o el pilotaje es mínimo.",
+        "1": "No ejecuta el programa ni pilota."
+      }
+    },
+    {
+      "id": "R-A",
+      "dimension": "A",
+      "criterio": "Arte y diseño: exploración visual, biomimética y entrega",
+      "peso": 15,
+      "objetivos": [
+        "OE-01",
+        "OE-05"
+      ],
+      "evidencia": "Modos de cámara usados (registrados en cada muestra) y evento biomimetica_completada con la reflexión final.",
+      "descriptores": {
+        "4": "Usa 3 o más modos de cámara, justifica la inspiración biomimética y la iluminación, y entrega la reflexión.",
+        "3": "Usa 2 modos de cámara y entrega la reflexión.",
+        "2": "Usa un solo modo de cámara; la reflexión es superficial.",
+        "1": "No entrega la reflexión final."
+      }
+    }
+  ],
+  "calculo": "Puntaje global = Σ (puntaje de la dimensión × peso / 100). El nivel se asigna con los umbrales de `niveles`.",
+  "entregableEquipo": {
+    "_nota": "Criterios R1–R8 con los que se revisa el software del equipo (antes eran la plantilla de este archivo). No intervienen en la calificación del alumno.",
+    "niveles": [
+      {
+        "id": 4,
+        "nombre": "Excelente"
+      },
+      {
+        "id": 3,
+        "nombre": "Bueno"
+      },
+      {
+        "id": 2,
+        "nombre": "Suficiente"
+      },
+      {
+        "id": 1,
+        "nombre": "Insuficiente"
+      }
+    ],
+    "criterios": [
+      {
+        "id": "R1",
+        "criterio": "Stack tecnológico",
+        "descripcion": "Babylon.js ≥ 9, JS puro con módulos ES, sin frameworks, sin TypeScript, Node ≥ 18 solo para ejecutar.",
+        "peso": 15
+      },
+      {
+        "id": "R2",
+        "criterio": "Formatos y recursos",
+        "descripcion": "Solo .glb/.gltf, PNG/JPG/WebP y SVG; datos en JSON; manifest.json.",
+        "peso": 10
+      },
+      {
+        "id": "R3",
+        "criterio": "Funcionamiento sin conexión",
+        "descripcion": "Todo se sirve localmente.",
+        "peso": 10
+      },
+      {
+        "id": "R4",
+        "criterio": "Fidelidad física",
+        "descripcion": "Propiedades físicas implementadas en SI y validadas.",
+        "peso": 20
+      },
+      {
+        "id": "R5",
+        "criterio": "Funcionalidad del simulador",
+        "descripcion": "Constructor, libros, pruebas, dictamen, piloto y HUD.",
+        "peso": 20
+      },
+      {
+        "id": "R6",
+        "criterio": "Trazabilidad",
+        "descripcion": "SLog, telemetría y bitácora completas, con uso de IA documentado.",
+        "peso": 10
+      },
+      {
+        "id": "R7",
+        "criterio": "Metodología Kanban",
+        "descripcion": "Tablero en Trello, WIP, DoD, métricas y PR en GitHub.",
+        "peso": 10
+      },
+      {
+        "id": "R8",
+        "criterio": "Documentación",
+        "descripcion": "README, objetivos, rúbricas, lecciones y créditos.",
+        "peso": 5
+      }
+    ]
+  }
+}

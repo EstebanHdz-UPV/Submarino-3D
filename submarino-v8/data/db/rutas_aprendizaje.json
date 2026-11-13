@@ -1,0 +1,90 @@
+{
+  "tabla": "rutas_aprendizaje",
+  "clave": "id",
+  "columnas": [
+    "id",
+    "proyecto_id",
+    "fase",
+    "orden",
+    "titulo",
+    "descripcion",
+    "modulo_slug",
+    "requisito",
+    "evento_validacion",
+    "criterio",
+    "creado_en",
+    "actualizado_en"
+  ],
+  "filas": [
+    {
+      "id": "submarino-exploracion-3d:M",
+      "proyecto_id": "submarino-exploracion-3d",
+      "fase": "M",
+      "orden": 1,
+      "titulo": "Matemáticas · Compuerta de cálculo",
+      "descripcion": "Aplicar cálculos de volumen, masa, presión y velocidad para interpretar el comportamiento del submarino.",
+      "modulo_slug": "matematicas",
+      "requisito": null,
+      "evento_validacion": "matematicas_intento",
+      "criterio": "Calcula P = ρ·g·h con error ≤ 1 % y elige lastre.",
+      "creado_en": "2026-11-11T05:34:34.020Z",
+      "actualizado_en": "2026-11-12T19:47:36.588Z"
+    },
+    {
+      "id": "submarino-exploracion-3d:S",
+      "proyecto_id": "submarino-exploracion-3d",
+      "fase": "S",
+      "orden": 2,
+      "titulo": "Ciencias · Laboratorio de Arquímedes",
+      "descripcion": "Relacionar principios de física con el comportamiento y los límites operativos del submarino.",
+      "modulo_slug": "ciencias",
+      "requisito": "M",
+      "evento_validacion": "ciencia_intento",
+      "criterio": "Calibra empuje y peso hasta |B − W| ≤ 5 % (flotabilidad neutra).",
+      "creado_en": "2026-11-11T05:34:34.021Z",
+      "actualizado_en": "2026-11-12T19:47:36.595Z"
+    },
+    {
+      "id": "submarino-exploracion-3d:E",
+      "proyecto_id": "submarino-exploracion-3d",
+      "fase": "E",
+      "orden": 3,
+      "titulo": "Ingeniería · Ensamblaje",
+      "descripcion": "Diseñar y validar una configuración de submarino que cumpla restricciones de montaje, estabilidad y seguridad.",
+      "modulo_slug": "ingenieria",
+      "requisito": "S",
+      "evento_validacion": "objeto_colocado",
+      "criterio": "Coloca al menos 5 componentes compatibles en el ensamblaje 3D.",
+      "creado_en": "2026-11-11T05:34:34.021Z",
+      "actualizado_en": "2026-11-12T19:47:36.600Z"
+    },
+    {
+      "id": "submarino-exploracion-3d:T",
+      "proyecto_id": "submarino-exploracion-3d",
+      "fase": "T",
+      "orden": 4,
+      "titulo": "Tecnología · Programación por bloques",
+      "descripcion": "Utilizar herramientas digitales para visualizar, controlar y analizar el comportamiento del submarino.",
+      "modulo_slug": "tecnologia",
+      "requisito": "E",
+      "evento_validacion": "programa_ejecutado",
+      "criterio": "Ordena leer → comparar → ajustar lastre y ejecuta el programa.",
+      "creado_en": "2026-11-11T05:34:34.023Z",
+      "actualizado_en": "2026-11-12T19:47:36.607Z"
+    },
+    {
+      "id": "submarino-exploracion-3d:A",
+      "proyecto_id": "submarino-exploracion-3d",
+      "fase": "A",
+      "orden": 5,
+      "titulo": "Arte y diseño · Biomimética y entrega",
+      "descripcion": "Aplicar criterios visuales y de comunicación para que el submarino y su interfaz sean claros, coherentes y utilizables.",
+      "modulo_slug": "arte-diseno",
+      "requisito": "T",
+      "evento_validacion": "biomimetica_completada",
+      "criterio": "Elige inspiración biomimética e iluminación y entrega una reflexión (≥ 20 caracteres).",
+      "creado_en": "2026-11-11T05:34:34.023Z",
+      "actualizado_en": "2026-11-12T19:47:36.613Z"
+    }
+  ]
+}

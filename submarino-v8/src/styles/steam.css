@@ -1,0 +1,34 @@
+/* Pantallas de aprendizaje: Biblioteca STEAM, Ruta STEAM y Proyecto (prefijo "st-"). */
+.st-pagina { max-width: 1100px; margin: 0 auto; }
+.st-intro { margin: 0 0 18px; color: var(--tenue); font-size: 14px; line-height: 1.6; }
+.st-intro a, .st-pagina code { color: var(--acento-2); }
+.st-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.st-phases { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 12px; }
+.st-card, .st-fase { background: var(--panel); border: 1px solid var(--borde); border-radius: 14px; padding: 18px; }
+.st-card h2, .st-fase h2 { margin: 4px 0 8px; font-size: 18px; }
+.st-card p { line-height: 1.55; }
+.st-fase { display: flex; flex-direction: column; gap: 4px; }
+.st-fase small { color: var(--acento-2); font-weight: 700; letter-spacing: .08em; }
+.st-fase p { margin: auto 0 0; padding-top: 10px; }
+.st-bloqueada { opacity: .45; }
+.st-panel, .st-quiz { margin-top: 16px; }
+.st-tag { color: var(--acento-2); font-weight: 700; font-size: 12px; letter-spacing: .06em; margin: 0 0 4px; }
+.st-bar { height: 8px; margin-top: 10px; background: #153a52; border-radius: 9px; overflow: hidden; }
+.st-bar span { display: block; height: 100%; background: var(--acento-2); transition: width .3s; }
+.st-pregunta { padding: 14px 0; border-top: 1px solid var(--borde); }
+.st-opcion { display: flex; flex-direction: row; align-items: center; gap: 8px; margin: 0; padding: 5px 2px; color: var(--texto); }
+.st-ok { color: var(--ok); }
+.st-pre { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--borde); border-radius: 8px; padding: 12px; font-family: ui-monospace, Consolas, monospace; }
+.st-texto { background: var(--bg); color: var(--texto); border: 1px solid var(--borde); border-radius: 8px; padding: 8px 10px; font: inherit; }
+.st-bloques { display: grid; gap: 8px; padding: 0; list-style: none; }
+.st-bloques li { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: var(--bg); border: 1px solid var(--borde); border-radius: 8px; }
+.st-bloques li span { flex: 1; }
+.st-proyecto { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, 1fr); padding: 0; overflow: hidden; }
+.st-proyecto img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+.st-cuerpo { padding: 24px; }
+.st-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.st-chips span { background: var(--panel-2); border: 1px solid var(--borde); border-radius: 20px; padding: 4px 12px; color: #bdebf0; font-size: 12px; }
+.st-pagina a:focus-visible, .st-pagina button:focus-visible { outline: 2px solid var(--acento-2); outline-offset: 2px; }
+.st-pagina a.btn { text-decoration: none; }
+@media (max-width: 760px) { .st-proyecto { grid-template-columns: 1fr; } }
+.st-sin-portada { grid-template-columns: 1fr; }

@@ -1,0 +1,399 @@
+{
+  "version": "2.0.0",
+  "proyecto_id": "submarino-exploracion-3d",
+  "slug": "submarino-exploracion-3d",
+  "modelo": "STEAM",
+  "modulos": [
+    {
+      "id": "INTRO",
+      "slug": "introduccion-steam",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Introducción STEAM",
+      "area": "Introducción",
+      "mapeoSTEAM": [
+        "M",
+        "S",
+        "E",
+        "T",
+        "A"
+      ],
+      "descripcion": "Conoce el reto de diseñar un submarino de exploración y cómo se conectan ciencia, tecnología, ingeniería, arte y matemáticas.",
+      "objetivo": "Explicar cómo las cinco disciplinas STEAM colaboran para diseñar, construir y evaluar un submarino de exploración.",
+      "objetivos_evaluables": [
+        "Identifica al menos una aportación de cada disciplina STEAM al proyecto.",
+        "Describe el problema de diseño y reconoce dos restricciones: seguridad y funcionamiento."
+      ],
+      "contenidos": [
+        "Reto: explorar el océano con un vehículo sumergible.",
+        "Ciclo de diseño: investigar, idear, construir, probar y mejorar.",
+        "Relación entre el modelo 3D, la física y la experiencia visual."
+      ],
+      "actividad": "Explora el submarino en 3D, identifica sus sistemas y escribe qué disciplina STEAM interviene en cada uno.",
+      "recursos": [
+        "index.html",
+        "manifest.json",
+        "src/main.js"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué enfoque describe mejor un proyecto STEAM?",
+          "opciones": [
+            "Estudiar una sola asignatura de forma aislada",
+            "Integrar ciencia, tecnología, ingeniería, arte y matemáticas para resolver un reto",
+            "Construir algo sin probarlo",
+            "Usar únicamente herramientas digitales"
+          ],
+          "respuesta": 1,
+          "explicacion": "STEAM integra las cinco áreas para resolver problemas reales."
+        },
+        {
+          "pregunta": "¿Cuál es una etapa esencial del proceso de diseño?",
+          "opciones": [
+            "Evitar las pruebas",
+            "Probar, analizar resultados y mejorar",
+            "Elegir materiales al azar",
+            "Terminar sin documentar"
+          ],
+          "respuesta": 1,
+          "explicacion": "La evaluación y la iteración permiten mejorar el diseño."
+        },
+        {
+          "pregunta": "¿Qué restricción es especialmente importante en un submarino?",
+          "opciones": [
+            "Que tenga el mayor número de colores",
+            "Que sea seguro a la profundidad de operación",
+            "Que no tenga instrumentos",
+            "Que use siempre el material más pesado"
+          ],
+          "respuesta": 1,
+          "explicacion": "La seguridad estructural y operativa es una condición central."
+        }
+      ]
+    },
+    {
+      "id": "M",
+      "slug": "matematicas",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Matemáticas",
+      "area": "M",
+      "mapeoSTEAM": [
+        "M"
+      ],
+      "descripcion": "Usa magnitudes, unidades, geometría y relaciones cuantitativas para dimensionar y analizar el submarino.",
+      "objetivo": "Aplicar cálculos de volumen, masa, presión y velocidad para interpretar el comportamiento del submarino.",
+      "objetivos_evaluables": [
+        "Calcula el volumen de un cuerpo geométrico simple con unidades correctas.",
+        "Resuelve una estimación de presión hidrostática usando profundidad y densidad.",
+        "Interpreta una gráfica de profundidad o velocidad frente al tiempo."
+      ],
+      "contenidos": [
+        "Geometría del casco: cilindros y esferas.",
+        "Unidades del Sistema Internacional y conversiones.",
+        "Presión hidrostática: P = ρgh.",
+        "Lectura de gráficas y telemetría."
+      ],
+      "actividad": "Compara el volumen de un cilindro y una esfera de dimensiones definidas; estima la presión a 100 m y contrasta el resultado con el simulador.",
+      "recursos": [
+        "src/modules/physics/Pressure.js",
+        "src/modules/physics/Buoyancy.js",
+        "src/modules/ui/Charts.js",
+        "data/physics.json"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué expresión representa la presión hidrostática manométrica?",
+          "opciones": [
+            "P = ρgh",
+            "P = m/v",
+            "P = F·d",
+            "P = v/t"
+          ],
+          "respuesta": 0,
+          "explicacion": "La presión hidrostática depende de densidad, gravedad y profundidad."
+        },
+        {
+          "pregunta": "¿Cuál es la unidad SI de presión?",
+          "opciones": [
+            "Newton",
+            "Pascal",
+            "Joule",
+            "Watt"
+          ],
+          "respuesta": 1,
+          "explicacion": "Un pascal equivale a un newton por metro cuadrado."
+        },
+        {
+          "pregunta": "Si se duplica la profundidad en el mismo fluido, la presión hidrostática manométrica ideal…",
+          "opciones": [
+            "Se reduce a la mitad",
+            "Permanece igual",
+            "Se duplica",
+            "Se vuelve cero"
+          ],
+          "respuesta": 2,
+          "explicacion": "P = ρgh es proporcional a la profundidad."
+        }
+      ]
+    },
+    {
+      "id": "S",
+      "slug": "ciencias",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Ciencias",
+      "area": "S",
+      "mapeoSTEAM": [
+        "S"
+      ],
+      "descripcion": "Explica la flotabilidad, la presión del agua, la resistencia de materiales y la estabilidad.",
+      "objetivo": "Relacionar principios de física con el comportamiento y los límites operativos del submarino.",
+      "objetivos_evaluables": [
+        "Distingue peso y empuje y predice si un cuerpo asciende, desciende o mantiene flotabilidad neutra.",
+        "Explica cómo aumenta la presión con la profundidad.",
+        "Identifica cómo la distribución de masa afecta la estabilidad."
+      ],
+      "contenidos": [
+        "Principio de Arquímedes y flotabilidad.",
+        "Presión hidrostática y esfuerzo del casco.",
+        "Arrastre, masa añadida y corrientes.",
+        "Centro de gravedad y centro de flotación."
+      ],
+      "actividad": "Modifica el lastre y la posición de la batería; registra cómo cambian la flotabilidad y el trimado.",
+      "recursos": [
+        "src/modules/physics/Buoyancy.js",
+        "src/modules/physics/Drag.js",
+        "src/modules/physics/HullStress.js",
+        "src/modules/physics/Stability.js"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué determina el empuje sobre un cuerpo sumergido?",
+          "opciones": [
+            "El volumen de fluido desplazado y su densidad",
+            "Solo el color del cuerpo",
+            "La velocidad del motor",
+            "La temperatura de la batería"
+          ],
+          "respuesta": 0,
+          "explicacion": "El empuje equivale al peso del fluido desplazado."
+        },
+        {
+          "pregunta": "¿Qué ocurre con la presión del agua al aumentar la profundidad?",
+          "opciones": [
+            "Disminuye",
+            "Aumenta",
+            "No cambia",
+            "Depende del color del casco"
+          ],
+          "respuesta": 1,
+          "explicacion": "La columna de agua sobre el objeto es mayor."
+        },
+        {
+          "pregunta": "¿Qué puede provocar una batería colocada demasiado hacia proa?",
+          "opciones": [
+            "Un cambio en el trimado",
+            "Menor gravedad",
+            "Presión atmosférica nula",
+            "Desaparición del empuje"
+          ],
+          "respuesta": 0,
+          "explicacion": "La distribución de masas modifica el centro de gravedad y el equilibrio."
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "slug": "ingenieria",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Ingeniería",
+      "area": "E",
+      "mapeoSTEAM": [
+        "E"
+      ],
+      "descripcion": "Integra componentes, materiales y subsistemas para construir un vehículo funcional y seguro.",
+      "objetivo": "Diseñar y validar una configuración de submarino que cumpla restricciones de montaje, estabilidad y seguridad.",
+      "objetivos_evaluables": [
+        "Selecciona materiales y componentes justificando su función.",
+        "Ensambla los componentes en puntos de montaje compatibles.",
+        "Ejecuta pruebas, interpreta el dictamen y propone una mejora basada en evidencia."
+      ],
+      "contenidos": [
+        "Requisitos y restricciones de diseño.",
+        "Casco, lastre, propulsión, energía y control.",
+        "Selección de materiales y reglas de ensamblaje.",
+        "Prototipado, pruebas y mejora iterativa."
+      ],
+      "actividad": "Arma una configuración, ejecuta un escenario de prueba y corrige al menos una condición que cause un dictamen no aprobado.",
+      "recursos": [
+        "src/modules/submarine/Assembly.js",
+        "src/modules/submarine/PartsCatalog.js",
+        "src/modules/trials/TrialRunner.js",
+        "data/assembly-rules.json"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué función cumple el sistema de lastre?",
+          "opciones": [
+            "Controlar la flotabilidad",
+            "Generar imágenes",
+            "Medir el color del agua",
+            "Almacenar telemetría únicamente"
+          ],
+          "respuesta": 0,
+          "explicacion": "El lastre permite ajustar la masa y el volumen de agua para controlar el ascenso y descenso."
+        },
+        {
+          "pregunta": "¿Qué conviene hacer después de una prueba no aprobada?",
+          "opciones": [
+            "Ignorar el resultado",
+            "Cambiar varias cosas sin registrar nada",
+            "Analizar las causas y ajustar el diseño",
+            "Eliminar los límites de seguridad"
+          ],
+          "respuesta": 2,
+          "explicacion": "La ingeniería usa evidencia de las pruebas para iterar el prototipo."
+        },
+        {
+          "pregunta": "¿Por qué se selecciona un material para el casco?",
+          "opciones": [
+            "Por sus propiedades mecánicas y su compatibilidad con el entorno",
+            "Solo por su nombre",
+            "Para evitar calcular presión",
+            "Por la cantidad de colores"
+          ],
+          "respuesta": 0,
+          "explicacion": "Resistencia, densidad y comportamiento del material afectan seguridad y desempeño."
+        }
+      ]
+    },
+    {
+      "id": "T",
+      "slug": "tecnologia",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Tecnología",
+      "area": "T",
+      "mapeoSTEAM": [
+        "T"
+      ],
+      "descripcion": "Explora cómo el software, los modelos 3D, los sensores simulados y la telemetría convierten el diseño en una experiencia interactiva.",
+      "objetivo": "Utilizar herramientas digitales para visualizar, controlar y analizar el comportamiento del submarino.",
+      "objetivos_evaluables": [
+        "Identifica la función de la escena, los modelos 3D y los módulos de software.",
+        "Interpreta datos de telemetría y reconoce variables relevantes.",
+        "Relaciona una entrada de control con el cambio observado en la simulación."
+      ],
+      "contenidos": [
+        "Babylon.js, escenas y modelos glTF.",
+        "Módulos JavaScript ES.",
+        "HUD, instrumentos y controles.",
+        "Registro de eventos y telemetría JSONL."
+      ],
+      "actividad": "Pilota el submarino, identifica tres variables del HUD y representa la profundidad registrada durante una prueba.",
+      "recursos": [
+        "src/modules/scene/SceneModule.js",
+        "src/modules/scene/ModelLoader.js",
+        "src/modules/ui/Hud.js",
+        "src/core/Telemetry.js"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué formato se utiliza para los modelos 3D del proyecto?",
+          "opciones": [
+            ".glb / .gltf",
+            ".docx",
+            ".mp3",
+            ".csv"
+          ],
+          "respuesta": 0,
+          "explicacion": "glTF es el formato de intercambio 3D usado por el simulador."
+        },
+        {
+          "pregunta": "¿Para qué sirve la telemetría?",
+          "opciones": [
+            "Registrar variables de la simulación a lo largo del tiempo",
+            "Cambiar la textura del casco solamente",
+            "Sustituir el motor físico",
+            "Eliminar los escenarios"
+          ],
+          "respuesta": 0,
+          "explicacion": "La telemetría registra datos para analizar el comportamiento."
+        },
+        {
+          "pregunta": "¿Qué tecnología renderiza la escena 3D?",
+          "opciones": [
+            "Babylon.js",
+            "Trello",
+            "JSONL",
+            "Markdown"
+          ],
+          "respuesta": 0,
+          "explicacion": "Babylon.js proporciona el motor de renderizado 3D."
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "slug": "arte-diseno",
+      "proyecto_id": "submarino-exploracion-3d",
+      "titulo": "Arte y diseño",
+      "area": "A",
+      "mapeoSTEAM": [
+        "A"
+      ],
+      "descripcion": "Comunica ideas mediante la forma, la composición, los materiales visuales y la experiencia de usuario.",
+      "objetivo": "Aplicar criterios visuales y de comunicación para que el submarino y su interfaz sean claros, coherentes y utilizables.",
+      "objetivos_evaluables": [
+        "Justifica decisiones de forma, color y materiales visuales según el contexto submarino.",
+        "Evalúa la legibilidad de los instrumentos y propone una mejora de interfaz.",
+        "Comunica el diseño con capturas, anotaciones o una breve bitácora."
+      ],
+      "contenidos": [
+        "Diseño de producto y lenguaje visual.",
+        "Color, iluminación, texturas y composición 3D.",
+        "Diseño de interfaz y jerarquía visual.",
+        "Comunicación visual de resultados."
+      ],
+      "actividad": "Propón una mejora de la interfaz o apariencia del submarino y justifica cómo facilita la exploración y la lectura de información.",
+      "recursos": [
+        "src/modules/environment/Visuals.js",
+        "src/modules/ui/Hud.js",
+        "assets/icons/",
+        "assets/textures/"
+      ],
+      "preguntas": [
+        {
+          "pregunta": "¿Qué aporta el diseño visual en un simulador?",
+          "opciones": [
+            "Mejora la comprensión y comunicación de la información",
+            "Reemplaza los cálculos físicos",
+            "Hace innecesarias las pruebas",
+            "Evita usar controles"
+          ],
+          "respuesta": 0,
+          "explicacion": "El diseño facilita interpretar el estado del sistema y orientarse."
+        },
+        {
+          "pregunta": "¿Qué característica ayuda a leer un instrumento del HUD?",
+          "opciones": [
+            "Contraste y jerarquía visual",
+            "Texto diminuto sin etiquetas",
+            "Colores indistinguibles",
+            "Ocultar unidades"
+          ],
+          "respuesta": 0,
+          "explicacion": "El contraste y la jerarquía hacen que la información sea legible."
+        },
+        {
+          "pregunta": "¿Qué debe justificar una decisión estética del submarino?",
+          "opciones": [
+            "Su relación con la función, el contexto y el usuario",
+            "Solo que sea aleatoria",
+            "Que oculte las piezas",
+            "Que impida ver los instrumentos"
+          ],
+          "respuesta": 0,
+          "explicacion": "El arte y diseño se integran con la función y la experiencia."
+        }
+      ]
+    }
+  ]
+}

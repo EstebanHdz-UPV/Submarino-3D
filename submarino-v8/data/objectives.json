@@ -1,0 +1,88 @@
+{
+  "proyecto": "Simulador de Submarinos 3D",
+  "objetivos": [
+    {
+      "id": "OBJ-01",
+      "titulo": "Ejecución local sin internet",
+      "descripcion": "El simulador arranca con un solo comando (node server.js) y funciona 100 % sin conexión.",
+      "medicion": "Con la red desactivada, la app carga en ≤ 5 s y no hay peticiones a dominios externos.",
+      "requisitos": [
+        "RNF-01",
+        "RNF-03",
+        "RNF-04",
+        "RF-01"
+      ]
+    },
+    {
+      "id": "OBJ-02",
+      "titulo": "Armar el submarino desde cero",
+      "descripcion": "El usuario arma el submarino pieza por pieza, eligiendo variantes y materiales.",
+      "medicion": "11 puntos de montaje, 29+ piezas y 7 materiales; estadísticas en vivo al cambiar cualquier pieza.",
+      "requisitos": [
+        "RF-11",
+        "RF-12",
+        "RF-15",
+        "RF-16"
+      ]
+    },
+    {
+      "id": "OBJ-03",
+      "titulo": "Dos libros de consulta",
+      "descripcion": "Libro 1 (piezas y ensamblaje) y Libro 2 (materiales por escenario y profundidad), consultables en la app.",
+      "medicion": "Ambos libros cargan desde JSON y sus tablas coinciden con los cálculos del simulador.",
+      "requisitos": [
+        "RF-13",
+        "RF-14"
+      ]
+    },
+    {
+      "id": "OBJ-04",
+      "titulo": "Física realista",
+      "descripcion": "Peso, empuje, presión, arrastre, masa añadida, estabilidad, corrientes, densidad variable, batería y colapso en unidades SI.",
+      "medicion": "Flotabilidad neutra con deriva < 0,05 m/s; ≈ 10,9 atm absolutas a 100 m; velocidad terminal estable; se endereza tras una perturbación.",
+      "requisitos": [
+        "RNF-07",
+        "RNF-08",
+        "RF-06",
+        "RF-07",
+        "RF-08"
+      ]
+    },
+    {
+      "id": "OBJ-05",
+      "titulo": "Pruebas con dictamen",
+      "descripcion": "7 escenarios de prueba y un piloto manual; las pruebas funcionan aunque el diseño esté incompleto.",
+      "medicion": "Cada prueba entrega aprobado/no aprobado con causas, estadísticas y gráficas.",
+      "requisitos": [
+        "RF-17",
+        "RF-18",
+        "RF-19"
+      ]
+    },
+    {
+      "id": "OBJ-06",
+      "titulo": "Piloto y HUD",
+      "descripcion": "Manejo con teclado (avance, giro, lastre, lateral, cámaras, reinicio) y HUD en Canvas 2D con iconos SVG.",
+      "medicion": "Los datos del HUD coinciden con los de la física; alertas de profundidad, batería e inundación.",
+      "requisitos": [
+        "RF-02",
+        "RF-03",
+        "RF-04",
+        "RF-05",
+        "RF-09",
+        "RF-10"
+      ]
+    },
+    {
+      "id": "OBJ-07",
+      "titulo": "Trazabilidad",
+      "descripcion": "SLog, telemetría en JSONL y bitácora desde cero, enlazadas a las tarjetas de Trello y a los commits de GitHub.",
+      "medicion": "Cada tarjeta terminada tiene entrada de bitácora; existe un .jsonl tras cada sesión.",
+      "requisitos": [
+        "RNF-09",
+        "RNF-10",
+        "RF-20"
+      ]
+    }
+  ]
+}

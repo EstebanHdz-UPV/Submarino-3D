@@ -1,0 +1,19 @@
+{
+  "aplicadas": [
+    {
+      "id": "001_crear_tabla_proyectos",
+      "descripcion": "Catálogo de proyectos STEAM que muestra proyectos.html.",
+      "aplicada_en": "2026-11-11T05:34:34.016Z"
+    },
+    {
+      "id": "002_crear_tabla_rutas_aprendizaje",
+      "descripcion": "Fases de la ruta STEAM de cada proyecto (orden, requisito y evento que la valida).",
+      "aplicada_en": "2026-11-11T05:34:34.018Z"
+    },
+    {
+      "id": "003_registrar_submarino_exploracion",
+      "descripcion": "Registra el simulador (tarjeta activa) y sus cinco fases a partir de manifest.json y data/lessons.json.",
+      "aplicada_en": "2026-11-11T05:34:34.024Z"
+    }
+  ]
+}

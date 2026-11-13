@@ -1,0 +1,98 @@
+{
+  "_nota": "Todas las constantes en unidades SI. Perfil de densidad del agua de mar: forma tomada de la tabla de densidad vs. profundidad de Encyclopaedia Britannica (agua de 35 psu a 0 °C, efecto de la compresión) y anclada a 1025 kg/m³ en superficie; validado en tests/physics/validacion-alvin.test.js. Fuentes en docs/FISICA.md y CREDITS.md.",
+  "unidades": "SI",
+  "gravedad": 9.81,
+  "presionAtmosfericaPa": 101325,
+  "pasoFijoS": 0.016667,
+  "dtMaxS": 0.5,
+  "superficieY": 0,
+  "agua": {
+    "mar": {
+      "nombre": "Mar",
+      "densidadSuperficieKgM3": 1025
+    },
+    "dulce": {
+      "nombre": "Dulce",
+      "densidadSuperficieKgM3": 1000
+    }
+  },
+  "perfilMar": {
+    "profundidadM": [
+      0,
+      100,
+      200,
+      1000,
+      2000,
+      4000,
+      6000,
+      8000,
+      10000
+    ],
+    "densidadKgM3": [
+      1025,
+      1026.5,
+      1027,
+      1031,
+      1036,
+      1045,
+      1053.5,
+      1061.8,
+      1069.6
+    ],
+    "temperaturaC": [
+      20,
+      15,
+      12,
+      4.5,
+      3,
+      2,
+      1.8,
+      1.6,
+      1.5
+    ]
+  },
+  "coefTermicoDensidad": 0.00021,
+  "masaAnadida": {
+    "avance": 0.1,
+    "lateral": 0.9,
+    "vertical": 0.9
+  },
+  "cdCuerpo": {
+    "cilindro": {
+      "avance": 0.35,
+      "lateral": 1.1,
+      "vertical": 1.1
+    },
+    "esfera": {
+      "avance": 0.47,
+      "lateral": 0.47,
+      "vertical": 0.47
+    }
+  },
+  "cdApendices": 1.0,
+  "factorSeguridad": 1.5,
+  "factorImperfeccionCilindro": 0.8,
+  "factorImperfeccionEsfera": 0.25,
+  "potenciaEquiposBaseW": 150,
+  "clAletas": 0.8,
+  "brazoAletasRel": 0.9,
+  "razonAmortiguamientoAngular": 0.3,
+  "rampaEmpuje": 1.0,
+  "modelo": {
+    "_nota": "Coeficientes del modelo físico (antes fijos en PhysicsModule.js). Son aproximaciones de ingeniería: validar y citar en docs/FISICA.md.",
+    "tasaInundacionKgS": 20,
+    "fraccionMinimaHelice": 0.2,
+    "exponentePotenciaEmpuje": 1.5,
+    "potenciaLateralRel": 0.3,
+    "empujeLateralRel": 0.2,
+    "razonAmortiguamientoOlas": 0.3,
+    "fraccionMinimaVolumen": 0.05,
+    "factorRestauracionSuperficie": 0.5,
+    "gmMinimoM": 0.05,
+    "amortiguamientoGuinadaLineal": 0.05,
+    "densidadReferenciaKgM3": 1025,
+    "omegaMaxRadS": 3,
+    "alertaProfundidadFrac": 0.8
+  },
+  "modoSimplificado": false
+}

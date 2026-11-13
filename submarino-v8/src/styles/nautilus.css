@@ -1,0 +1,605 @@
+/* ==========================================================================
+   NAUTILUS · barra lateral + pantalla de inicio (diseño de Figma)
+   Todas las clases llevan el prefijo "nx-" para no chocar con los estilos del simulador.
+   ========================================================================== */
+
+.nx-home,
+.nx-sidebar {
+  --nx-navy: #081c2b;
+  --nx-navy2: #0c293c;
+  --nx-ink: #112737;
+  --nx-muted: #657783;
+  --nx-cyan: #0e9ec0;
+  --nx-line: #dfe8ed;
+  --nx-bg: #f4f8fa;
+}
+.nx-sidebar {
+  height: 100%;
+  min-height: 0;
+  background: var(--nx-navy);
+  color: #c7d5dc;
+  padding: 27px 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.nx-brand {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 0 8px 42px;
+}
+.nx-brand-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #0e95b4;
+  font-size: 25px;
+}
+.nx-brand b {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 1.7px;
+}
+.nx-brand small {
+  display: block;
+  color: #7893a2;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 3px;
+}
+.nx-nav-label,
+.nx-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  font-weight: 800;
+  color: #0e9ec0;
+}
+.nx-nav-label {
+  color: #597483;
+  padding: 0 13px 12px;
+}
+.nx-sidebar nav {
+  display: grid;
+  gap: 5px;
+}
+.nx-sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 45px;
+  padding: 0 13px;
+  border-radius: 9px;
+  color: #9bb0bc;
+  text-decoration: none;
+  font-size: 13px;
+}
+.nx-sidebar nav a:hover,
+.nx-sidebar nav a.nx-active {
+  color: #fff;
+  background: linear-gradient(90deg, #0e7995, #0c667e);
+}
+.nx-sidebar nav a.nx-active {
+  box-shadow: inset 3px 0 #43c9e7;
+}
+.nx-sidebar-foot {
+  margin-top: auto;
+  border-top: 1px solid #ffffff18;
+  padding: 18px 10px 0;
+  color: #7893a2;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.nx-online,
+.nx-tag i,
+.nx-float-card i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2cb486;
+  margin-right: 7px;
+}
+.nx-top {
+  max-width: 1440px;
+  margin: auto;
+  padding: 36px clamp(25px, 4vw, 62px) 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nx-top h1 {
+  font-size: 29px;
+  margin: 7px 0;
+}
+.nx-top p,
+.nx-section-title p {
+  margin: 0;
+  color: var(--nx-muted);
+  font-size: 13px;
+}
+.nx-pill {
+  padding: 12px 17px;
+  border: 1px solid #cbdce3;
+  background: white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #294252;
+  font-size: 12px;
+  font-weight: 700;
+}
+.nx-hero {
+  min-height: 490px;
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: radial-gradient(circle at 85% 20%, #18495e 0, #0c2a3d 33%, #081e2d 68%);
+}
+.nx-hero-copy {
+  padding: 55px 15px 55px clamp(35px, 6vw, 90px);
+  z-index: 2;
+}
+.nx-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #6ddaf040;
+  border-radius: 20px;
+  color: #a9cfda;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+.nx-tag i {
+  background: #44d7ef;
+  box-shadow: 0 0 0 4px #44d7ef20;
+}
+.nx-hero h2 {
+  font-size: clamp(42px, 4.2vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+  margin: 25px 0;
+}
+.nx-hero h2 em {
+  color: #4bc3df;
+  font-style: normal;
+}
+.nx-hero-copy > p {
+  max-width: 500px;
+  color: #a9bdc8;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 27px;
+}
+.nx-actions {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+}
+.nx-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.nx-btn.nx-primary {
+  background: #0e9ec0;
+  color: white;
+  box-shadow: 0 7px 18px #0e9ec033;
+}
+.nx-btn.nx-secondary {
+  color: #dce8ec;
+  background: #ffffff0f;
+  border: 1px solid #ffffff30;
+}
+.nx-trust {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  color: #91aebb;
+  font-size: 10px;
+}
+.nx-trust span:first-letter {
+  color: #31b98e;
+}
+.nx-visual {
+  position: relative;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  background-image:
+    linear-gradient(#5db4c014 1px, transparent 1px),
+    linear-gradient(90deg, #5db4c014 1px, transparent 1px);
+  background-size: 55px 55px;
+}
+.nx-visual svg {
+  width: 95%;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 25px 30px #0005);
+}
+.nx-ring {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid #57c4db20;
+  border-radius: 50%;
+}
+.nx-ring.nx-r2 {
+  width: 500px;
+  height: 500px;
+}
+.nx-depth {
+  position: absolute;
+  right: 18px;
+  color: #7095a6;
+  font: 10px monospace;
+}
+.nx-d1 {
+  top: 27%;
+}
+.nx-d2 {
+  top: 61%;
+}
+.nx-float-card {
+  position: absolute;
+  z-index: 3;
+  right: 7%;
+  bottom: 12%;
+  padding: 15px 18px;
+  background: #0c2b40ef;
+  border: 1px solid #6ddaf033;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px #0003;
+}
+.nx-float-card small {
+  display: block;
+  color: #8caab8;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+.nx-float-card b {
+  font-size: 11px;
+}
+.nx-overview {
+  max-width: 1440px;
+  margin: auto;
+  padding: 45px clamp(25px, 4vw, 62px) 55px;
+}
+.nx-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 23px;
+}
+.nx-section-title h2 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+.nx-counter {
+  font-size: 11px;
+  color: #59717f;
+  background: #e8f2f5;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+.nx-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.nx-card {
+  position: relative;
+  padding: 23px 22px 20px;
+  background: white;
+  border: 1px solid var(--nx-line);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--nx-ink);
+  box-shadow: 0 3px 12px #112b3a09;
+  transition: 0.2s;
+}
+.nx-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #112b3a12;
+}
+.nx-number {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #b1c1c9;
+  font-size: 11px;
+}
+.nx-ico {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 10px;
+  font-size: 21px;
+  margin-bottom: 17px;
+}
+.nx-cyan {
+  background: #e7f7fa;
+  color: #0e9ec0;
+}
+.nx-blue {
+  background: #edf1ff;
+  color: #6577c5;
+}
+.nx-green {
+  background: #e6f7f1;
+  color: #20a977;
+}
+.nx-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.nx-card p {
+  min-height: 54px;
+  color: var(--nx-muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+.nx-card > b {
+  font-size: 11px;
+  color: #087e9a;
+}
+.nx-card > b span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.nx-footer {
+  padding: 20px clamp(25px, 4vw, 62px);
+  border-top: 1px solid var(--nx-line);
+  color: #82939c;
+  font-size: 9px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.nx-footer span {
+  letter-spacing: 0;
+  text-transform: none;
+}
+@media (max-width: 950px) {
+  .nx-hero {
+    grid-template-columns: 1fr;
+  }
+  .nx-hero-copy {
+    padding-right: 35px;
+  }
+  .nx-visual {
+    min-height: 330px;
+  }
+  .nx-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 680px) {
+  .nx-top {
+    padding: 25px 20px;
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+  .nx-hero-copy {
+    padding: 38px 22px;
+  }
+  .nx-hero h2 {
+    font-size: 44px;
+  }
+  .nx-visual {
+    min-height: 260px;
+  }
+  .nx-overview {
+    padding: 32px 20px;
+  }
+  .nx-cards {
+    grid-template-columns: 1fr;
+  }
+  .nx-card p {
+    min-height: 0;
+  }
+  .nx-footer {
+    padding: 18px 20px;
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   Estructura general: barra lateral | (barra superior + contenido)
+   ========================================================================== */
+#app {
+  display: grid;
+  grid-template-columns: 244px minmax(0, 1fr);
+  height: 100%;
+}
+#contenido {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Barra lateral */
+.nx-sidebar nav {
+  overflow-y: auto;
+  min-height: 0;
+  padding-bottom: 8px;
+}
+.nx-sidebar nav a svg {
+  width: 19px;
+  height: 19px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.nx-sidebar .nx-nav-label {
+  padding-top: 16px;
+}
+.nx-sidebar .nx-nav-label:first-of-type {
+  padding-top: 0;
+}
+.nx-sidebar nav a.active {
+  box-shadow: inset 3px 0 #43c9e7;
+}
+.nx-sidebar nav a:focus-visible,
+.nx-brand:focus-visible {
+  outline: 2px solid #43c9e7;
+  outline-offset: 2px;
+}
+
+/* Barra superior de las pantallas del simulador y de aprendizaje */
+#barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 62px;
+  padding: 10px 22px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--borde);
+}
+#barra h1 {
+  margin: 2px 0 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+#barra .nx-eyebrow {
+  display: block;
+}
+#app[data-ruta="inicio"] #barra {
+  display: none;
+}
+#app[data-ruta="inicio"] #contenido {
+  grid-template-rows: minmax(0, 1fr);
+}
+
+/* La pantalla de inicio ocupa todo el panel (sin relleno) y usa el tema claro del diseño */
+#app[data-ruta="inicio"] #panel {
+  padding: 0;
+  background: var(--nx-bg);
+  color: var(--nx-ink);
+}
+.nx-home {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--nx-bg);
+  color: var(--nx-ink);
+}
+.nx-home > .nx-top,
+.nx-home > .nx-overview {
+  width: 100%;
+}
+.nx-home > .nx-footer {
+  margin-top: auto;
+}
+.nx-home h1,
+.nx-home h2,
+.nx-home h3 {
+  margin-bottom: 0;
+}
+.nx-home .nx-top h1 {
+  font-size: 29px;
+  margin: 7px 0;
+}
+.nx-home .nx-hero h2 {
+  font-size: clamp(42px, 4.2vw, 62px);
+  margin: 25px 0;
+}
+.nx-home .nx-section-title h2 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+.nx-home .nx-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.nx-home a:focus-visible,
+.nx-home button:focus-visible {
+  outline: 2px solid #0e9ec0;
+  outline-offset: 3px;
+}
+.nx-btn {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.nx-btn.nx-secondary {
+  border: 1px solid #ffffff30;
+}
+.nx-quick {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.nx-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 11px;
+  color: #8fd3e4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.nx-card {
+  cursor: pointer;
+}
+
+/* Pantallas "de escena" (ensamblaje, pruebas…): el panel izquierdo conserva su ancho */
+@media (max-width: 950px) {
+  #app {
+    grid-template-columns: 206px minmax(0, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  #app {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+  .nx-sidebar {
+    padding: 18px 8px 14px;
+  }
+  .nx-brand {
+    padding: 0 0 22px;
+    justify-content: center;
+  }
+  .nx-brand > span:last-child,
+  .nx-nav-label,
+  .nx-sidebar-foot,
+  .nx-sidebar nav a span {
+    display: none;
+  }
+  .nx-sidebar nav a {
+    justify-content: center;
+    padding: 0;
+  }
+  #barra {
+    padding: 8px 14px;
+  }
+  #barra h1 {
+    font-size: 17px;
+  }
+}

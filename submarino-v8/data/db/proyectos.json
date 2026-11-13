@@ -1,0 +1,110 @@
+{
+  "tabla": "proyectos",
+  "clave": "id",
+  "columnas": [
+    "id",
+    "slug",
+    "nombre",
+    "descripcion",
+    "version",
+    "portada",
+    "url",
+    "activo",
+    "mapeo_steam",
+    "objetivos",
+    "modulos",
+    "autores",
+    "creado_en",
+    "actualizado_en"
+  ],
+  "filas": [
+    {
+      "id": "submarino-exploracion-3d",
+      "slug": "submarino-exploracion-3d",
+      "nombre": "Simulador de Submarinos 3D",
+      "descripcion": "Simulador de submarino de exploración: se arma desde cero con piezas y materiales, se consultan dos libros y se prueba en escenarios con física realista.",
+      "version": "0.1.0",
+      "portada": "assets/images/submarino-portada.png",
+      "url": "index.html#/proyecto",
+      "activo": true,
+      "mapeo_steam": {
+        "M": "Matemáticas: geometría, unidades, presión y análisis de datos.",
+        "S": "Ciencias: flotabilidad, presión, fuerzas, materiales y estabilidad.",
+        "E": "Ingeniería: diseño, ensamblaje, selección de componentes y validación.",
+        "T": "Tecnología: Babylon.js, modelos 3D, controles, HUD y telemetría.",
+        "A": "Arte y diseño: apariencia, composición, texturas y experiencia de usuario."
+      },
+      "objetivos": [
+        {
+          "id": "OE-01",
+          "objetivo": "Integrar las cinco disciplinas STEAM en la solución de un reto de exploración submarina.",
+          "indicador": "Relaciona al menos una decisión del proyecto con cada disciplina M, S, E, T y A.",
+          "evidencia": "Mapa STEAM y explicación del diseño.",
+          "dimensiones": [
+            "M",
+            "S",
+            "E",
+            "T",
+            "A"
+          ],
+          "regla": "minimo",
+          "umbral": 70
+        },
+        {
+          "id": "OE-02",
+          "objetivo": "Aplicar modelos matemáticos y principios científicos al comportamiento del submarino.",
+          "indicador": "Calcula o interpreta volumen, presión, empuje y estabilidad con unidades SI.",
+          "evidencia": "Ejercicios y resultados de simulación.",
+          "dimensiones": [
+            "M",
+            "S"
+          ],
+          "regla": "promedio",
+          "umbral": 70
+        },
+        {
+          "id": "OE-03",
+          "objetivo": "Construir y validar un prototipo digital funcional.",
+          "indicador": "Ensambla subsistemas compatibles y ejecuta escenarios identificando causas de aprobación o fallo.",
+          "evidencia": "Configuración del submarino y reportes de prueba.",
+          "dimensiones": [
+            "E"
+          ],
+          "regla": "promedio",
+          "umbral": 70
+        },
+        {
+          "id": "OE-04",
+          "objetivo": "Usar tecnología digital para visualizar y analizar datos.",
+          "indicador": "Interpreta variables del HUD y una serie de telemetría.",
+          "evidencia": "Captura del HUD y gráfica de telemetría.",
+          "dimensiones": [
+            "T"
+          ],
+          "regla": "promedio",
+          "umbral": 70
+        },
+        {
+          "id": "OE-05",
+          "objetivo": "Comunicar decisiones de diseño de forma clara y usable.",
+          "indicador": "Justifica elecciones visuales y propone una mejora de legibilidad o experiencia.",
+          "evidencia": "Propuesta visual anotada y bitácora.",
+          "dimensiones": [
+            "A"
+          ],
+          "regla": "promedio",
+          "umbral": 70
+        }
+      ],
+      "modulos": 6,
+      "autores": [
+        "Nayma Karina Rodriguez Guevara",
+        "Enrique Zoe Leon Saldivar",
+        "Oscar Daniel Purata Martinez",
+        "Jorge Esteban Hernández Pérez"
+      ],
+      "creado_en": "2026-11-11T05:34:34.019Z",
+      "actualizado_en": "2026-11-12T19:47:36.580Z"
+    }
+  ]
+}

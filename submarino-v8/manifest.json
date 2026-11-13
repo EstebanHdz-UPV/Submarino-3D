@@ -1,0 +1,209 @@
+{
+  "name": "Simulador de Submarinos 3D",
+  "version": "0.1.0",
+  "descripcion": "Simulador de submarino de exploración: se arma desde cero con piezas y materiales, se consultan dos libros y se prueba en escenarios con física realista.",
+  "autores": [
+    {
+      "nombre": "Nayma Karina Rodriguez Guevara",
+      "matricula": "2530250",
+      "rol": "Física y comportamiento del submarino"
+    },
+    {
+      "nombre": "Enrique Zoe Leon Saldivar",
+      "matricula": "2530265",
+      "rol": "Mundo 3D y apariencia"
+    },
+    {
+      "nombre": "Oscar Daniel Purata Martinez",
+      "matricula": "2530285",
+      "rol": "Pantalla, controles y pilotaje"
+    },
+    {
+      "nombre": "Jorge Esteban Hernández Pérez",
+      "matricula": "2530451",
+      "rol": "Coordinación y líder Kanban"
+    }
+  ],
+  "engine": {
+    "name": "babylon.js",
+    "minVersion": "9.0.0",
+    "minMajor": 9,
+    "vendored": "9.32.0",
+    "path": "vendor/babylon/"
+  },
+  "runtime": {
+    "node": ">=18",
+    "role": "solo-servidor-local",
+    "host": "127.0.0.1",
+    "port": 3000
+  },
+  "entry": "src/main.js",
+  "methodology": "Kanban",
+  "modules": [
+    "scene",
+    "physics",
+    "submarine",
+    "controls",
+    "environment",
+    "trials",
+    "books",
+    "ui"
+  ],
+  "data": {
+    "physics": "data/physics.json",
+    "materials": "data/materials.json",
+    "parts": "data/parts.json",
+    "assemblyRules": "data/assembly-rules.json",
+    "scenarios": "data/scenarios.json",
+    "i18n": "data/i18n/es.json",
+    "bookParts": "data/books/libro-piezas.json",
+    "bookMaterials": "data/books/libro-materiales.json",
+    "exampleDesign": "data/designs/ejemplo.json",
+    "objectives": "data/objectives.json",
+    "rubrics": "data/rubrics.json",
+    "lessons": "data/lessons.json",
+    "telemetrySchema": "data/telemetry.schema.json",
+    "kanban": "data/kanban/tarjetas.json"
+  },
+  "docs": {
+    "readme": "README.md",
+    "objectives": "docs/OBJETIVOS.md",
+    "rubrics": "docs/RUBRICAS.md",
+    "lessons": "docs/LECCIONES.md",
+    "methodology": "docs/METODOLOGIA.md",
+    "physics": "docs/FISICA.md",
+    "logbook": "docs/bitacora/BITACORA.md",
+    "logbookData": "docs/bitacora/entradas.json",
+    "board": "docs/kanban/TABLERO.md",
+    "metrics": "docs/kanban/METRICAS.md",
+    "credits": "CREDITS.md"
+  },
+  "telemetry": {
+    "enabled": true,
+    "endpoint": "/api/telemetry",
+    "intervalMs": 100,
+    "batchSize": 20,
+    "maxBuffer": 6000
+  },
+  "assetPolicy": {
+    "models": [
+      "glb",
+      "gltf"
+    ],
+    "images": [
+      "png",
+      "jpg",
+      "webp"
+    ],
+    "icons": [
+      "svg"
+    ],
+    "data": [
+      "json"
+    ],
+    "forbidden": [
+      "obj",
+      "fbx",
+      "blend",
+      "stl"
+    ]
+  },
+  "tools": {
+    "kanban": "Trello",
+    "repository": "GitHub"
+  },
+  "slug": "submarino-exploracion-3d",
+  "proyecto_id": "submarino-exploracion-3d",
+  "portada": "assets/images/submarino-portada.png",
+  "catalogo": {
+    "activo": true,
+    "orden": 1,
+    "categoria": "Ingeniería naval",
+    "nivel": "Secundaria / Bachillerato",
+    "duracionHoras": 12,
+    "tabla": "proyectos",
+    "migraciones": "server/migraciones.js"
+  },
+  "mapeoSTEAM": {
+    "M": "Matemáticas: geometría, unidades, presión y análisis de datos.",
+    "S": "Ciencias: flotabilidad, presión, fuerzas, materiales y estabilidad.",
+    "E": "Ingeniería: diseño, ensamblaje, selección de componentes y validación.",
+    "T": "Tecnología: Babylon.js, modelos 3D, controles, HUD y telemetría.",
+    "A": "Arte y diseño: apariencia, composición, texturas y experiencia de usuario."
+  },
+  "objetivos_evaluables": [
+    {
+      "id": "OE-01",
+      "objetivo": "Integrar las cinco disciplinas STEAM en la solución de un reto de exploración submarina.",
+      "indicador": "Relaciona al menos una decisión del proyecto con cada disciplina M, S, E, T y A.",
+      "evidencia": "Mapa STEAM y explicación del diseño.",
+      "dimensiones": [
+        "M",
+        "S",
+        "E",
+        "T",
+        "A"
+      ],
+      "regla": "minimo",
+      "umbral": 70
+    },
+    {
+      "id": "OE-02",
+      "objetivo": "Aplicar modelos matemáticos y principios científicos al comportamiento del submarino.",
+      "indicador": "Calcula o interpreta volumen, presión, empuje y estabilidad con unidades SI.",
+      "evidencia": "Ejercicios y resultados de simulación.",
+      "dimensiones": [
+        "M",
+        "S"
+      ],
+      "regla": "promedio",
+      "umbral": 70
+    },
+    {
+      "id": "OE-03",
+      "objetivo": "Construir y validar un prototipo digital funcional.",
+      "indicador": "Ensambla subsistemas compatibles y ejecuta escenarios identificando causas de aprobación o fallo.",
+      "evidencia": "Configuración del submarino y reportes de prueba.",
+      "dimensiones": [
+        "E"
+      ],
+      "regla": "promedio",
+      "umbral": 70
+    },
+    {
+      "id": "OE-04",
+      "objetivo": "Usar tecnología digital para visualizar y analizar datos.",
+      "indicador": "Interpreta variables del HUD y una serie de telemetría.",
+      "evidencia": "Captura del HUD y gráfica de telemetría.",
+      "dimensiones": [
+        "T"
+      ],
+      "regla": "promedio",
+      "umbral": 70
+    },
+    {
+      "id": "OE-05",
+      "objetivo": "Comunicar decisiones de diseño de forma clara y usable.",
+      "indicador": "Justifica elecciones visuales y propone una mejora de legibilidad o experiencia.",
+      "evidencia": "Propuesta visual anotada y bitácora.",
+      "dimensiones": [
+        "A"
+      ],
+      "regla": "promedio",
+      "umbral": 70
+    }
+  ],
+  "curriculoSTEAM": {
+    "data": "data/lessons.json",
+    "modulos": 6,
+    "orden": [
+      "INTRO",
+      "M",
+      "S",
+      "E",
+      "T",
+      "A"
+    ],
+    "evaluacion": "Opción múltiple por módulo; cada pregunta incluye respuesta correcta y explicación."
+  }
+}

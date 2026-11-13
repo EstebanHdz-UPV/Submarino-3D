@@ -1,0 +1,494 @@
+{
+  "titulo": "Libro 2 · Manual de materiales por escenario y profundidad",
+  "paginas": [
+    {
+      "titulo": "Cómo elegir el material",
+      "parrafos": [
+        "Este libro te ayuda a elegir materiales según el escenario y la profundidad. La profundidad decide la presión; la presión decide el espesor y el material del casco.",
+        "Un casco más fuerte suele pesar más y costar más. Un casco más pesado exige más flotabilidad (espuma) y un tanque de lastre mayor.",
+        "En el simulador la profundidad de colapso se calcula con dos modos de falla: fluencia del material y pandeo elástico. El resultado es el menor de los dos. Para la profundidad de diseño se divide entre el factor de seguridad 1,5."
+      ],
+      "consejos": [
+        "Elige el material más barato que cumpla la profundidad de diseño (tabla de escenarios).",
+        "En cilindros delgados el pandeo depende de la rigidez (módulo) y del espesor, no solo de la resistencia: un material más resistente no siempre colapsa más profundo."
+      ]
+    },
+    {
+      "titulo": "La presión según la profundidad",
+      "parrafos": [
+        "La presión crece de forma casi lineal: cada 10 m de agua de mar suman aproximadamente 1 atm.",
+        "P = P_atm + ρ·g·h, con ρ ≈ 1025 kg/m³ y g = 9,81 m/s²."
+      ],
+      "tabla": {
+        "columnas": [
+          "Profundidad (m)",
+          "Presión absoluta (atm)",
+          "Presión manométrica (MPa)"
+        ],
+        "filas": [
+          [
+            "10",
+            "2.0",
+            "0.10"
+          ],
+          [
+            "30",
+            "4.0",
+            "0.30"
+          ],
+          [
+            "50",
+            "6.0",
+            "0.50"
+          ],
+          [
+            "100",
+            "10.9",
+            "1.01"
+          ],
+          [
+            "200",
+            "20.9",
+            "2.02"
+          ],
+          [
+            "300",
+            "30.8",
+            "3.02"
+          ],
+          [
+            "500",
+            "50.8",
+            "5.04"
+          ],
+          [
+            "1,000",
+            "100.7",
+            "10.10"
+          ],
+          [
+            "2,000",
+            "200.8",
+            "20.25"
+          ],
+          [
+            "4,000",
+            "402.5",
+            "40.68"
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Materiales disponibles",
+      "parrafos": [
+        "Valores aproximados de fichas técnicas típicas. Los costos son referencias por kilogramo de material."
+      ],
+      "tabla": {
+        "columnas": [
+          "Material",
+          "Densidad (kg/m³)",
+          "Límite elástico (MPa)",
+          "Módulo (GPa)",
+          "Costo (USD/kg)",
+          "Uso típico"
+        ],
+        "filas": [
+          [
+            "Aluminio 6061-T6",
+            "2,700",
+            "276",
+            "68.9",
+            "$4",
+            "Poca profundidad, económico y fácil de trabajar"
+          ],
+          [
+            "Aluminio 7075-T6",
+            "2,810",
+            "503",
+            "71.7",
+            "$8",
+            "Profundidad media, buena relación resistencia/peso"
+          ],
+          [
+            "Acero HY-80",
+            "7,850",
+            "552",
+            "205.0",
+            "$7",
+            "Cascos resistentes; mayor masa que exige más flotabilidad"
+          ],
+          [
+            "Titanio Ti-6Al-4V",
+            "4,430",
+            "880",
+            "114.0",
+            "$40",
+            "Gran profundidad; muy costoso"
+          ],
+          [
+            "Compuesto de fibra de carbono",
+            "1,600",
+            "550",
+            "70.0",
+            "$80",
+            "Muy ligero; sensible a imperfecciones y delaminación"
+          ],
+          [
+            "Acrílico PMMA",
+            "1,180",
+            "110",
+            "3.0",
+            "$6",
+            "Visores y domos transparentes (compresión)"
+          ],
+          [
+            "Espuma sintáctica",
+            "500",
+            "30",
+            "1.5",
+            "$30",
+            "Flotabilidad fija según profundidad nominal"
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Cascos: colapso y profundidad de diseño",
+      "parrafos": [
+        "Resultado del simulador para cada casco y material. \"Modo\" indica qué falla primero."
+      ],
+      "tabla": {
+        "columnas": [
+          "Casco",
+          "Material",
+          "Masa (kg)",
+          "Colapso (m)",
+          "Diseño (m)",
+          "Modo",
+          "Costo del casco"
+        ],
+        "filas": [
+          [
+            "Casco cilíndrico corto",
+            "Aluminio 6061-T6",
+            "733",
+            "212",
+            "141",
+            "pandeo",
+            "$8,794"
+          ],
+          [
+            "Casco cilíndrico corto",
+            "Aluminio 7075-T6",
+            "763",
+            "221",
+            "147",
+            "pandeo",
+            "$18,305"
+          ],
+          [
+            "Casco cilíndrico corto",
+            "Acero HY-80",
+            "2,131",
+            "620",
+            "413",
+            "pandeo",
+            "$44,746"
+          ],
+          [
+            "Casco cilíndrico corto",
+            "Titanio Ti-6Al-4V",
+            "1,202",
+            "352",
+            "235",
+            "pandeo",
+            "$144,294"
+          ],
+          [
+            "Casco cilíndrico corto",
+            "Compuesto de fibra de carbono",
+            "434",
+            "212",
+            "141",
+            "pandeo",
+            "$104,231"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "Aluminio 6061-T6",
+            "1,670",
+            "176",
+            "117",
+            "pandeo",
+            "$20,039"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "Aluminio 7075-T6",
+            "1,738",
+            "183",
+            "122",
+            "pandeo",
+            "$41,712"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "Acero HY-80",
+            "4,855",
+            "515",
+            "343",
+            "pandeo",
+            "$101,960"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "Titanio Ti-6Al-4V",
+            "2,740",
+            "293",
+            "195",
+            "pandeo",
+            "$328,795"
+          ],
+          [
+            "Casco cilíndrico largo",
+            "Compuesto de fibra de carbono",
+            "990",
+            "176",
+            "117",
+            "pandeo",
+            "$237,504"
+          ],
+          [
+            "Casco esférico",
+            "Aluminio 6061-T6",
+            "824",
+            "1,818",
+            "1,212",
+            "fluencia",
+            "$13,192"
+          ],
+          [
+            "Casco esférico",
+            "Aluminio 7075-T6",
+            "858",
+            "2,404",
+            "1,603",
+            "pandeo",
+            "$27,458"
+          ],
+          [
+            "Casco esférico",
+            "Acero HY-80",
+            "2,397",
+            "3,621",
+            "2,414",
+            "fluencia",
+            "$67,119"
+          ],
+          [
+            "Casco esférico",
+            "Titanio Ti-6Al-4V",
+            "1,353",
+            "3,825",
+            "2,550",
+            "pandeo",
+            "$216,441"
+          ],
+          [
+            "Casco esférico",
+            "Compuesto de fibra de carbono",
+            "489",
+            "2,323",
+            "1,549",
+            "pandeo",
+            "$156,346"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "Aluminio 6061-T6",
+            "1,512",
+            "3,322",
+            "2,215",
+            "fluencia",
+            "$24,185"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "Aluminio 7075-T6",
+            "1,573",
+            "6,027",
+            "4,018",
+            "fluencia",
+            "$50,340"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "Acero HY-80",
+            "4,395",
+            "6,609",
+            "4,406",
+            "fluencia",
+            "$123,051"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "Titanio Ti-6Al-4V",
+            "2,480",
+            "10,514",
+            "7,010",
+            "fluencia",
+            "$396,809"
+          ],
+          [
+            "Casco esférico de pared gruesa",
+            "Compuesto de fibra de carbono",
+            "896",
+            "6,585",
+            "4,390",
+            "fluencia",
+            "$286,634"
+          ]
+        ]
+      },
+      "consejos": [
+        "Las esferas llegan mucho más profundo que los cilindros de la misma pared.",
+        "El titanio es ligero para su resistencia, pero caro."
+      ]
+    },
+    {
+      "titulo": "Qué usar en cada escenario",
+      "parrafos": [
+        "Recomendación por rango de profundidad: los 3 cascos más baratos que cumplen la profundidad de diseño, y las piezas que deben soportarla (domo y propulsor)."
+      ],
+      "tabla": {
+        "columnas": [
+          "Escenario",
+          "Rango",
+          "Reto principal",
+          "Cascos recomendados",
+          "Domo mínimo",
+          "Propulsor mínimo"
+        ],
+        "filas": [
+          [
+            "Aguas someras",
+            "0–30 m",
+            "Flotabilidad y trimado; la presión es baja.",
+            "Casco cilíndrico corto de Aluminio 6061-T6 (diseño 141 m, $8,794) · Casco esférico de Aluminio 6061-T6 (diseño 1,212 m, $13,192) · Casco cilíndrico corto de Aluminio 7075-T6 (diseño 147 m, $18,305)",
+            "Domo acrílico 300 m",
+            "Propulsor pequeño"
+          ],
+          [
+            "Arrecife / plataforma",
+            "30–200 m",
+            "Maniobra y corrientes; casi no hay luz solar a partir de los 100 m.",
+            "Casco esférico de Aluminio 6061-T6 (diseño 1,212 m, $13,192) · Casco esférico de pared gruesa de Aluminio 6061-T6 (diseño 2,215 m, $24,185) · Casco esférico de Aluminio 7075-T6 (diseño 1,603 m, $27,458)",
+            "Domo acrílico 300 m",
+            "Propulsor pequeño"
+          ],
+          [
+            "Mesopelágico",
+            "200–1000 m",
+            "Resistencia del casco y oscuridad total.",
+            "Casco esférico de Aluminio 6061-T6 (diseño 1,212 m, $13,192) · Casco esférico de pared gruesa de Aluminio 6061-T6 (diseño 2,215 m, $24,185) · Casco esférico de Aluminio 7075-T6 (diseño 1,603 m, $27,458)",
+            "Domo acrílico 1000 m",
+            "Propulsor medio"
+          ],
+          [
+            "Profundo",
+            "1000–4000 m",
+            "Materiales caros, casco esférico grueso y colapso.",
+            "Casco esférico de pared gruesa de Aluminio 7075-T6 (diseño 4,018 m, $50,340) · Casco esférico de pared gruesa de Acero HY-80 (diseño 4,406 m, $123,051) · Casco esférico de pared gruesa de Compuesto de fibra de carbono (diseño 4,390 m, $286,634)",
+            "Domo acrílico 4000 m",
+            "Propulsor grande"
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Visores y piezas sumergidas",
+      "parrafos": [
+        "El acrílico (PMMA) se usa en visores porque es transparente y resiste bien la compresión, pero es pesado en espesores grandes.",
+        "Cada pieza tiene una profundidad de diseño; el colapso ocurre al superar esa profundidad por el factor de seguridad. La pieza limitante del diseño se muestra en las estadísticas."
+      ],
+      "tabla": {
+        "columnas": [
+          "Pieza",
+          "Prof. diseño (m)",
+          "Masa (kg)",
+          "Costo"
+        ],
+        "filas": [
+          [
+            "Domo acrílico 300 m",
+            "300",
+            "35",
+            "$3,000"
+          ],
+          [
+            "Domo acrílico 1000 m",
+            "1,000",
+            "90",
+            "$9,000"
+          ],
+          [
+            "Domo acrílico 4000 m",
+            "4,000",
+            "260",
+            "$30,000"
+          ],
+          [
+            "Torre de acceso baja",
+            "600",
+            "80",
+            "$4,000"
+          ],
+          [
+            "Torre de acceso alta",
+            "300",
+            "120",
+            "$5,500"
+          ],
+          [
+            "Propulsor pequeño",
+            "500",
+            "45",
+            "$6,000"
+          ],
+          [
+            "Propulsor medio",
+            "2,000",
+            "90",
+            "$14,000"
+          ],
+          [
+            "Propulsor grande",
+            "4,000",
+            "170",
+            "$32,000"
+          ],
+          [
+            "Espuma sintáctica 1000 m",
+            "1,000",
+            "200",
+            "$5,000"
+          ],
+          [
+            "Espuma sintáctica 4000 m",
+            "4,000",
+            "260",
+            "$15,000"
+          ]
+        ]
+      }
+    },
+    {
+      "titulo": "Temperatura y energía",
+      "parrafos": [
+        "El agua fría reduce la capacidad útil de la batería. La plomo-ácido pierde más (≈ 0,8 % por cada °C bajo 20 °C) que la de ion-litio (≈ 0,4 %).",
+        "La densidad del agua también cambia con la temperatura y la profundidad, lo que modifica la flotabilidad. Para estudiarlo sin esos efectos activa el modo simplificado en Configuración."
+      ]
+    }
+  ]
+}

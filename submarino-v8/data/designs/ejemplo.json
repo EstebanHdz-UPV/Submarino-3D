@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "proyecto_id": "submarino-exploracion-3d",
+  "nombre": "ejemplo",
+  "piezas": {
+    "casco": {
+      "partId": "casco-cilindro-corto",
+      "materialId": "acero-hy80"
+    },
+    "propulsion": {
+      "partId": "prop-medio",
+      "materialId": "acero-hy80"
+    },
+    "lastre": {
+      "partId": "lastre-grande",
+      "materialId": "acero-hy80"
+    },
+    "cabina": {
+      "partId": "domo-300",
+      "materialId": "acrilico-pmma"
+    },
+    "aletas": {
+      "partId": "aletas-pequenas",
+      "materialId": "aluminio-7075"
+    },
+    "torre": {
+      "partId": "torre-baja",
+      "materialId": "acero-hy80"
+    },
+    "bateria": {
+      "partId": "bat-plomo-10",
+      "materialId": null
+    },
+    "lastreFijo": {
+      "partId": "peso-2000",
+      "materialId": null
+    },
+    "focos": {
+      "partId": "led-100",
+      "materialId": null
+    },
+    "sonar": {
+      "partId": "sonar-basico",
+      "materialId": null
+    },
+    "controles": {
+      "partId": "controles-navegacion",
+      "materialId": null
+    }
+  }
+}

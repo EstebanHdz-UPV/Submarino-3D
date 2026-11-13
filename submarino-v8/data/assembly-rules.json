@@ -1,0 +1,252 @@
+{
+  "_nota": "Puntos de montaje. posRel.x/y se miden en radios del casco y posRel.z en medios largos (+z = proa).",
+  "slots": [
+    {
+      "id": "casco",
+      "tipo": "casco",
+      "nombre": "Casco principal",
+      "obligatorio": true,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "faltante": "Sin casco no hay submarino: la prueba no se puede ejecutar."
+    },
+    {
+      "id": "propulsion",
+      "tipo": "propulsion",
+      "nombre": "Módulo de propulsión",
+      "obligatorio": true,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 0,
+        "z": -1.15
+      },
+      "faltante": "Sin propulsor no hay empuje: el submarino solo deriva con las corrientes."
+    },
+    {
+      "id": "lastre",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre",
+      "obligatorio": true,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 1.15,
+        "z": 0
+      },
+      "faltante": "Sin tanque de lastre no hay control de profundidad."
+    },
+    {
+      "id": "cabina",
+      "tipo": "cabina",
+      "nombre": "Cabina de control (domo)",
+      "obligatorio": true,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 0.1,
+        "z": 1.05
+      },
+      "faltante": "Sin domo el casco queda abierto: se inunda y la masa aumenta."
+    },
+    {
+      "id": "aletas",
+      "tipo": "aletas",
+      "nombre": "Aletas",
+      "obligatorio": true,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 0,
+        "z": -0.9
+      },
+      "faltante": "Sin aletas no se puede girar a baja velocidad ni a alta."
+    },
+    {
+      "id": "torre",
+      "tipo": "torre",
+      "nombre": "Torre de acceso",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 1.1,
+        "z": 0.55
+      },
+      "faltante": "Sin torre no hay acceso en superficie (no afecta la física)."
+    },
+    {
+      "id": "bateria",
+      "tipo": "bateria",
+      "nombre": "Batería",
+      "obligatorio": true,
+      "externo": false,
+      "posRel": {
+        "x": 0,
+        "y": -0.45,
+        "z": -0.15
+      },
+      "faltante": "Sin batería no hay energía: ni propulsión, ni bombas, ni instrumentos."
+    },
+    {
+      "id": "lastreFijo",
+      "tipo": "lastreFijo",
+      "nombre": "Pesos de compensación",
+      "obligatorio": false,
+      "externo": false,
+      "posRel": {
+        "x": 0,
+        "y": -0.8,
+        "z": 0.2
+      },
+      "faltante": "Sin pesos de compensación el submarino suele quedar muy flotante."
+    },
+    {
+      "id": "flotabilidad",
+      "tipo": "flotabilidad",
+      "nombre": "Flotabilidad fija",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 1.1,
+        "z": -0.55
+      },
+      "faltante": "Sin espuma sintáctica no hay flotabilidad fija adicional."
+    },
+    {
+      "id": "focos",
+      "tipo": "focos",
+      "nombre": "Focos",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": -0.3,
+        "z": 1
+      },
+      "faltante": "Sin focos no se ilumina el fondo oscuro."
+    },
+    {
+      "id": "sonar",
+      "tipo": "sonar",
+      "nombre": "Sonar",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": -0.7,
+        "z": 0.9
+      },
+      "faltante": "Sin sonar el HUD no muestra la distancia al fondo."
+    },
+    {
+      "id": "propulsion_aux",
+      "tipo": "propulsion",
+      "nombre": "Propulsor auxiliar",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0.72,
+        "y": 0,
+        "z": -1
+      },
+      "faltante": "Propulsor auxiliar opcional para maniobras y redundancia."
+    },
+    {
+      "id": "lastre_aux",
+      "tipo": "lastre",
+      "nombre": "Tanque de lastre auxiliar",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": -0.72,
+        "y": 0.65,
+        "z": 0.05
+      },
+      "faltante": "Tanque auxiliar opcional para aumentar el control de flotabilidad."
+    },
+    {
+      "id": "bateria_aux",
+      "tipo": "bateria",
+      "nombre": "Batería auxiliar",
+      "obligatorio": false,
+      "externo": false,
+      "posRel": {
+        "x": 0.65,
+        "y": -0.45,
+        "z": -0.15
+      },
+      "faltante": "Batería auxiliar opcional para ampliar la autonomía."
+    },
+    {
+      "id": "controles",
+      "tipo": "controles",
+      "nombre": "Timón y panel de navegación",
+      "obligatorio": false,
+      "externo": false,
+      "posRel": {
+        "x": 0,
+        "y": -0.22,
+        "z": 0.6
+      },
+      "faltante": "Sin controles interiores no se dispone de instrumentación local de navegación."
+    },
+    {
+      "id": "periscopio",
+      "tipo": "periscopio",
+      "nombre": "Periscopio",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 1.38,
+        "z": 0.55
+      },
+      "faltante": "El periscopio permite observación desde la cabina."
+    },
+    {
+      "id": "portillas",
+      "tipo": "portillas",
+      "nombre": "Portillas de babor (izquierda)",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": -1,
+        "y": 0.05,
+        "z": 0.65
+      },
+      "faltante": "Las portillas permiten observación lateral protegida."
+    },
+    {
+      "id": "portillas_estribor",
+      "tipo": "portillas",
+      "nombre": "Portillas de estribor (derecha)",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 1,
+        "y": 0.05,
+        "z": 0.65
+      },
+      "faltante": "Las portillas permiten observación lateral protegida."
+    },
+    {
+      "id": "escotilla",
+      "tipo": "escotilla",
+      "nombre": "Escotilla hermética",
+      "obligatorio": false,
+      "externo": true,
+      "posRel": {
+        "x": 0,
+        "y": 1.01,
+        "z": 0.8
+      },
+      "faltante": "La escotilla proporciona acceso estanco al casco."
+    }
+  ]
+}

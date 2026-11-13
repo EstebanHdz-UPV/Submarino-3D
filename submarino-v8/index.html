@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081c2b">
+  <title>NAUTILUS · Simulador de Submarinos 3D</title>
+  <link rel="icon" href="assets/icons/submarino.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/screens.css">
+  <link rel="stylesheet" href="src/styles/nautilus.css">
+  <link rel="stylesheet" href="src/styles/steam.css">
+</head>
+<body>
+  <div id="app" data-ruta="inicio">
+    <!-- Barra lateral NAUTILUS (el menú lo genera src/main.js) -->
+    <aside class="nx-sidebar">
+      <a class="nx-brand" href="#/inicio" aria-label="NAUTILUS, ir al inicio">
+        <span class="nx-brand-icon" aria-hidden="true">◉</span>
+        <span><b>NAUTILUS</b><small>SIMULADOR NAVAL</small></span>
+      </a>
+      <nav id="nav" aria-label="Navegación principal"></nav>
+      <div class="nx-sidebar-foot"><span class="nx-online"></span> SISTEMA LOCAL · OFFLINE</div>
+    </aside>
+
+    <div id="contenido">
+      <!-- Barra superior (se oculta en el inicio, que trae su propio encabezado) -->
+      <header id="barra">
+        <div><span class="nx-eyebrow" id="barra-sup"></span><h1 id="barra-titulo"></h1></div>
+        <div id="pasos" class="pasos oculto"></div>
+      </header>
+
+      <main id="main">
+        <section id="panel"></section>
+        <section id="stage">
+          <canvas id="render"></canvas>
+          <canvas id="hud"></canvas>
+          <div id="control-status" class="control-status oculto" aria-live="polite"></div>
+          <div id="ayuda" class="oculto"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="toasts"></div>
+  <div id="cargando">Cargando simulador…</div>
+
+  <!-- Babylon.js (local, sin internet) -->
+  <script src="vendor/babylon/babylon.js"></script>
+  <script src="vendor/babylon/babylon.glTFFileLoader.min.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

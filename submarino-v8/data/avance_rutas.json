@@ -1,0 +1,19 @@
+{
+  "proyecto_id": "submarino-exploracion-3d",
+  "desbloqueada": "M",
+  "completadas": [],
+  "datos": {},
+  "eventos": {
+    "objetos_colocados": 2,
+    "slots_colocados": [
+      "cabina",
+      "propulsion_aux"
+    ]
+  },
+  "ultimo_objeto": {
+    "proyecto_id": "submarino-exploracion-3d",
+    "slotId": "propulsion_aux",
+    "partId": "prop-pequeno-v4",
+    "fecha": "2026-11-11T04:44:45.579Z"
+  }
+}
